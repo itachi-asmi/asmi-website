@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import { MenuIcon } from 'lucide-react';
+
 import {
 	Dialog,
 	DialogContent,
 	DialogDescription,
+	DialogHeader,
+	DialogTitle,
 	DialogTrigger,
-} from '@radix-ui/react-dialog';
-import { MenuIcon } from 'lucide-react';
-
-import { DialogHeader } from '../../shared/dialog';
+} from '../../shared/dialog';
 import Menu from './menu';
 
 const MobileMenu = () => {
@@ -19,6 +20,7 @@ const MobileMenu = () => {
 				<MenuIcon />
 			</DialogTrigger>
 			<DialogContent>
+				<DialogTitle />
 				<DialogHeader>
 					<DialogDescription className="mx-16">
 						<Menu open={open} setOpen={setOpen} />

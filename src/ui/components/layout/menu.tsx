@@ -48,6 +48,13 @@ const Menu = ({
 				>
 					Contact Us
 				</Link>
+				<Link
+					className="text-18 hover:text-brand lg:text-16 lg:leading-24 block w-full lg:inline-block lg:w-auto"
+					href="https://clinic.pemilyy.com/"
+					target="_blank"
+				>
+					Clinic Login
+				</Link>
 			</div>
 			{/* <Button onClick={scrollToBottom} size="medium" className="hidden lg:block">
 				Contact Us

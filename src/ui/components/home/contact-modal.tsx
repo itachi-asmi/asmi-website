@@ -9,7 +9,12 @@ import { z } from 'zod';
 
 import { contactUsAction } from '../../../actions/contact';
 import { Button } from '../../shared/button';
-import { Dialog, DialogContent, DialogHeader } from '../../shared/dialog';
+import {
+	Dialog,
+	DialogContent,
+	DialogHeader,
+	DialogTitle,
+} from '../../shared/dialog';
 import {
 	Form,
 	FormControl,
@@ -70,6 +75,7 @@ export const Contact = () => {
 	return (
 		<Dialog open={show} onOpenChange={() => setShow(!show)}>
 			<DialogContent>
+				<DialogTitle />
 				<section id="contact" className="container relative p-16">
 					<DialogHeader>
 						<h2 className="text-left text-[24px] font-medium leading-[34px]">
