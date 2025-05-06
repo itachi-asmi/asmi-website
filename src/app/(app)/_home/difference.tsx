@@ -5,7 +5,7 @@ const DifferenceSection = () => {
 		<section className="relative overflow-hidden px-4 py-20">
 			<div className="container relative z-10 mx-auto">
 				<div className="flex flex-col items-center lg:flex-row">
-					<div className="mb-10 lg:mb-0 lg:w-1/2">
+					<div className="mb-10 w-full lg:mb-0 lg:w-1/2">
 						<div className="relative">
 							<div className="from-asmi-300 to-asmi-500 h-[400px] w-full overflow-hidden rounded-xl bg-gradient-to-br shadow-lg">
 								<div className="absolute inset-0 flex items-center justify-center">

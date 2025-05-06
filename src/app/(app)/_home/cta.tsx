@@ -24,7 +24,7 @@ const CTASection = () => {
 							</Button>
 							<Button
 								variant="outline"
-								className="flex items-center justify-center rounded-lg border-white px-8 py-6 text-lg text-white hover:bg-white/10"
+								className="flex items-center justify-center rounded-lg border-white px-8 py-6 text-lg"
 							>
 								Join Waitlist
 							</Button>

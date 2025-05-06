@@ -1,9 +1,12 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
+import { Menu } from 'lucide-react';
 
 import { Button } from '../../../ui/button';
 
 const Header = () => {
-	// const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
 		<header className="z-50 w-full px-4 py-6 md:px-8 lg:px-12">
@@ -16,12 +19,12 @@ const Header = () => {
 				</div>
 
 				{/* Mobile menu button */}
-				{/* <button
+				<button
 					className="rounded-md p-2 hover:bg-gray-100 md:hidden"
 					onClick={() => setIsMenuOpen(!isMenuOpen)}
 				>
 					<Menu size={24} />
-				</button> */}
+				</button>
 
 				{/* Desktop navigation */}
 				<nav className="hidden space-x-8 md:flex">
@@ -55,7 +58,7 @@ const Header = () => {
 				</div>
 
 				{/* Mobile menu */}
-				{/* {isMenuOpen && (
+				{isMenuOpen && (
 					<div className="animate-fade-in absolute inset-x-0 top-20 z-50 bg-white shadow-lg md:hidden">
 						<div className="flex flex-col p-4">
 							<a
@@ -84,7 +87,7 @@ const Header = () => {
 							</Button>
 						</div>
 					</div>
-				)} */}
+				)}
 			</div>
 		</header>
 	);

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
 
@@ -37,9 +38,9 @@ const HeroSection = () => {
 						<div className="relative z-10">
 							<div className="from-asmi-200 to-asmi-400 flex h-[400px] w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br shadow-xl md:h-[500px]">
 								<img
-									src="/lovable-uploads/4c6f6ac8-4db3-4875-9bf5-755889b0266b.png"
+									src="/images/hero.jpeg"
 									alt="Asmi AI Interface"
-									className="animate-float h-auto w-3/4 object-contain"
+									className="animate-float h-auto w-[30%] object-contain"
 								/>
 							</div>
 						</div>
