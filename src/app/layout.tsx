@@ -3,8 +3,8 @@ import '@/styles/globals.css';
 // import 'react-calendar/dist/Calendar.css';
 import { type PropsWithChildren } from 'react';
 import { type Metadata } from 'next';
-import Script from 'next/script';
 
+// import Script from 'next/script';
 import Providers from '../services/providers';
 
 import { siteConfig } from '@/helpers/constant';
@@ -49,7 +49,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
 		<html lang="en" suppressHydrationWarning>
 			<body className={cn('font-urbanist min-h-screen', fonts)}>
 				<Providers>{children}</Providers>
-				<Script
+				{/* <Script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=AW-16492952746"
 					strategy="afterInteractive"
@@ -61,7 +61,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
 					gtag('js', new Date());
 					gtag('config', 'AW-16492952746');
 				`}
-				</Script>
+				</Script> */}
 			</body>
 		</html>
 	);
