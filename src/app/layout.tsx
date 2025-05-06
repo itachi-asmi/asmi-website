@@ -47,7 +47,7 @@ export const generateMetadata = (): Metadata => ({
 const RootLayout = ({ children }: PropsWithChildren) => {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={cn('font-satoshi min-h-screen', fonts)}>
+			<body className={cn('font-urbanist min-h-screen', fonts)}>
 				<Providers>{children}</Providers>
 				<Script
 					async

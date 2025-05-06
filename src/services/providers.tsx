@@ -2,7 +2,7 @@
 
 import React, { type ReactNode } from 'react';
 
-import { Toaster } from '@/ui/shared/toast';
+import { Toaster } from '@/ui/toast';
 
 export default function Providers({ children }: { children: ReactNode }) {
 	return (
