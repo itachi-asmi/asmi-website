@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
-import { Button } from '../../../ui/button';
+import HeroForm from './hero-form';
 
 const HeroSection = () => {
 	return (
@@ -22,29 +21,25 @@ const HeroSection = () => {
 							extracts key info, remembers it, and helps you get
 							things done.
 						</p>
-						<div className="flex flex-col gap-4 sm:flex-row">
-							<Button className="bg-asmi-600 hover:bg-asmi-700 flex items-center rounded-lg px-8 py-6 text-lg text-white">
-								{/* Try Asmi Free on WhatsApp */}
-								Join the Waitlist
-								<ArrowRight className="ml-2 size-5" />
-							</Button>
-							{/* <Button
-								variant="outline"
-								className="border-asmi-300 text-asmi-700 hover:bg-asmi-50 flex items-center rounded-lg px-8 py-6 text-lg"
-							>
-								<Play className="mr-2 size-5" />
-								Watch Demo
-							</Button> */}
-						</div>
+						<HeroForm />
 					</div>
 
 					<div className="animate-fade-in relative md:w-1/2">
 						<div className="relative z-10">
 							<div className="from-asmi-200 to-asmi-400 flex h-[400px] w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br shadow-xl md:h-[500px]">
-								<img
+								{/* <img
 									src="/images/hero.png"
 									alt="Asmi AI Interface"
 									className="animate-float h-auto w-1/2 rounded-md object-contain md:w-[30%]"
+								/> */}
+								<video
+									src="/images/hero.mp4"
+									autoPlay
+									loop
+									muted
+									playsInline
+									preload="auto"
+									className="size-full rounded-md object-cover"
 								/>
 							</div>
 						</div>

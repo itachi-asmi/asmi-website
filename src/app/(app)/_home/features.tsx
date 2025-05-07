@@ -52,13 +52,10 @@ const FeaturesSection = () => {
 	return (
 		<section id="features" className="bg-gray-50 px-4 py-20">
 			<div className="container mx-auto">
-				<div className="mb-16 text-center">
-					<h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+				<div className="mb-4 text-center">
+					<h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
 						What Asmi Can Do For You
 					</h2>
-					<p className="mx-auto max-w-2xl text-xl text-gray-600">
-						Your Smartest Life Companion
-					</p>
 				</div>
 
 				<div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
