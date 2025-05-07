@@ -42,9 +42,9 @@ const HeroSection = () => {
 						<div className="relative z-10">
 							<div className="from-asmi-200 to-asmi-400 flex h-[400px] w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br shadow-xl md:h-[500px]">
 								<img
-									src="/images/hero.jpeg"
+									src="/images/hero.png"
 									alt="Asmi AI Interface"
-									className="animate-float h-auto w-[30%] rounded-md object-contain"
+									className="animate-float h-auto w-1/2 rounded-md object-contain md:w-[30%]"
 								/>
 							</div>
 						</div>
