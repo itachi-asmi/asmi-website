@@ -86,7 +86,7 @@ const FeaturesSection = () => {
 						</div>
 						<div className="flex justify-center md:w-1/4">
 							<img
-								src="/images/whatsapp.jpeg"
+								src="/images/whatsapp.png"
 								alt="Asmi on WhatsApp"
 								className="size-24 rounded-full bg-white object-contain"
 							/>
