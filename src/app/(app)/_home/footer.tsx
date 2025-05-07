@@ -12,11 +12,12 @@ const Footer = () => {
 								Asmi
 							</h2>
 							<span className="text-sm text-gray-500">
-								• Voice-first AI OS
+								• Personal Assistant on WhatsApp
 							</span>
 						</div>
 						<p className="max-w-xs text-gray-600">
-							Your voice-powered AI that organizes your life.
+							Your AI that listens, remembers, and helps you run
+							your life—all on WhatsApp.
 						</p>
 					</div>
 
@@ -133,7 +134,7 @@ const Footer = () => {
 										href="#"
 										className="hover:text-asmi-600 text-gray-600 transition-colors"
 									>
-										Terms
+										Contact
 									</a>
 								</li>
 							</ul>
@@ -176,7 +177,7 @@ const Footer = () => {
 							href="#"
 							className="hover:text-asmi-600 text-sm text-gray-500"
 						>
-							Terms
+							Discord
 						</a>
 						<a
 							href="#"

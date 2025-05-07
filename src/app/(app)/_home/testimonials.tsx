@@ -40,22 +40,22 @@ const TestimonialsSection = () => {
 		{
 			quote: 'Asmi feels like the first AI that actually knows me. I speak freely, and it just gets things done.',
 			author: 'Alex Morgan',
-			role: 'Remote Founder, Beta User',
+			role: 'Founder, Beta User',
 		},
 		{
-			quote: 'I stopped using 5 other apps. Asmi is like a silent co-pilot for my brain.',
-			author: 'Jamie Lee',
-			role: 'Therapist & Coach',
+			quote: 'I forward everything to Asmi—ideas, links, voice notes. It remembers everything and reminds me exactly when I need it.',
+			author: 'Sneha',
+			role: 'Working Professional',
 		},
 		{
-			quote: "The voice interface is so natural, I forget I'm talking to an AI. It's changed how I manage my day.",
-			author: 'Chris Johnson',
-			role: 'Product Designer',
+			quote: 'Asmi helps me stay on top of everything—personal and work. I no longer forget things I tell myself in the middle of the day.',
+			author: 'Rajeev',
+			role: 'Product Manager',
 		},
 		{
-			quote: 'No more juggling between calendar, notes, and task apps. Asmi handles everything seamlessly.',
-			author: 'Taylor Wilson',
-			role: 'Marketing Executive',
+			quote: "Talking to Asmi is like talking to my future self. It's organized, efficient, and somehow always knows what I need next.",
+			author: 'Tanya',
+			role: 'Creative Writer',
 		},
 	];
 

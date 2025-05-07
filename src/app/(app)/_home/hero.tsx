@@ -11,17 +11,20 @@ const HeroSection = () => {
 				<div className="flex flex-col items-center md:flex-row">
 					<div className="animate-fade-in mb-12 md:mb-0 md:w-1/2">
 						<h1 className="mb-6 text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-6xl">
-							The AI That Truly{' '}
-							<span className="text-asmi-600">Knows You</span>
+							The Smartest{' '}
+							<span className="text-asmi-600">
+								Personal Assistant
+							</span>{' '}
+							on WhatsApp
 						</h1>
 						<p className="mb-8 max-w-lg text-xl text-gray-600">
-							Asmi is an always-on, voice-first AI OS that
-							passively listens, understands your context, and
-							becomes your personal command center for life.
+							Just send it a message—voice or text—and it takes
+							care of the rest. Whether it&apos;s a quick note, a
+							to-do, or something you want to remember.
 						</p>
 						<div className="flex flex-col gap-4 sm:flex-row">
 							<Button className="bg-asmi-600 hover:bg-asmi-700 flex items-center rounded-lg px-8 py-6 text-lg text-white">
-								Try Asmi Free
+								Try Asmi Free on WhatsApp
 								<ArrowRight className="ml-2 size-5" />
 							</Button>
 							<Button

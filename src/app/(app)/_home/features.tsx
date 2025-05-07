@@ -1,5 +1,5 @@
 import React, { type ComponentType } from 'react';
-import { Calendar, Check, Heart, MessageSquare, Settings } from 'lucide-react';
+import { Brain, CalendarDays, ListTodo, MessageSquare } from 'lucide-react';
 
 const FeatureCard = ({
 	title,
@@ -26,28 +26,28 @@ const FeatureCard = ({
 const FeaturesSection = () => {
 	const features = [
 		{
-			title: 'Chief of Staff',
+			title: 'Daily Planner',
 			description:
-				'Plans your day, prepares you for meetings, takes notes, plans travel, pays bills.',
-			icon: Settings,
+				'Sends your personalized schedule every morning based on your calendar and priorities.',
+			icon: CalendarDays,
 		},
 		{
-			title: 'Wellness Coach',
+			title: 'To-Do Manager',
 			description:
-				'Creates plans based on your daily schedule, pushes you to follow through, tracks your progress.',
-			icon: Heart,
-		},
-		{
-			title: 'Entertainment Curator',
-			description:
-				'Suggests shows, food, and travel based on your mood and preferences.',
-			icon: MessageSquare,
+				'Creates, tracks, and reminds you of your tasks exactly when you need them.',
+			icon: ListTodo,
 		},
 		{
 			title: 'Memory Keeper',
 			description:
-				'Recalls what matters—from a thought you had in the car to a gift idea from last week.',
-			icon: Calendar,
+				"Remembers everything you've told or forwarded—ideas, links, voice notes, important info.",
+			icon: MessageSquare,
+		},
+		{
+			title: 'Personal Assistant',
+			description:
+				'Answers your questions with context from your own life and messaging history.',
+			icon: Brain,
 		},
 	];
 
@@ -78,19 +78,21 @@ const FeaturesSection = () => {
 					<div className="flex flex-col items-center md:flex-row">
 						<div className="mb-8 md:mb-0 md:mr-8 md:w-3/4">
 							<h3 className="mb-4 text-2xl font-bold text-white md:text-3xl">
-								All working together seamlessly
+								All over WhatsApp. All personalized just for
+								you.
 							</h3>
 							<p className="text-lg text-white/80">
-								Asmi integrates every aspect of your life,
-								creating a personalized experience that just
-								works. No typing. No toggling between apps. Just
-								your voice.
+								Asmi integrates every aspect of your life right
+								where your conversations already happen. No new
+								app. No learning curve. Just your WhatsApp.
 							</p>
 						</div>
 						<div className="flex justify-center md:w-1/4">
-							<div className="flex size-24 items-center justify-center rounded-full bg-white">
-								<Check size={48} className="text-asmi-600" />
-							</div>
+							<img
+								src="/images/0f7e42be-2cd4-4219-98a2-1a0e289a9383.png"
+								alt="Asmi on WhatsApp"
+								className="size-24 rounded-full bg-white object-contain p-2"
+							/>
 						</div>
 					</div>
 				</div>

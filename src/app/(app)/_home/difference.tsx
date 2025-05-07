@@ -11,12 +11,11 @@ const DifferenceSection = () => {
 								<div className="absolute inset-0 flex items-center justify-center">
 									<div className="p-8 text-center">
 										<h3 className="mb-4 text-3xl font-bold text-white">
-											Beyond Prompts
+											Starts on WhatsApp
 										</h3>
 										<p className="text-lg text-white/90">
-											Asmi lives with you. It understands
-											your day, your world, your
-											context—passively.
+											Built around your life. Where your
+											life already happens—on WhatsApp.
 										</p>
 									</div>
 								</div>
@@ -31,28 +30,29 @@ const DifferenceSection = () => {
 							Why Asmi Is Different
 						</h2>
 						<h3 className="text-asmi-600 mb-4 text-2xl font-semibold">
-							Built Around Your Real Life, Not Just Prompts
+							Starts on WhatsApp. Built Around Your Life.
 						</h3>
+
 						<p className="mb-6 text-lg text-gray-600">
-							Unlike chatbots and AI tools that require constant
-							input, Asmi lives with you. It understands your day,
-							your world, your context—passively. That creates a
-							magical experience you don&apos;t have to think
-							about. It just works.
+							Most AI tools need apps and effort. Asmi lives where
+							your life already happens—on WhatsApp. You talk to
+							it just like a friend, and it becomes your second
+							brain, always on, always helpful.
 						</p>
 
 						<div className="rounded-lg border border-gray-100 bg-gray-50 p-6">
 							<h4 className="mb-3 font-medium text-gray-900">
 								How Asmi compares to other AI assistants:
 							</h4>
+
 							<ul className="space-y-3">
 								<li className="flex items-start">
 									<span className="bg-asmi-100 text-asmi-700 mr-3 mt-0.5 flex size-6 items-center justify-center rounded-full">
 										✓
 									</span>
 									<span className="text-gray-700">
-										Always-on, passive listening vs.
-										prompt-based interactions
+										Lives in WhatsApp vs. requiring a
+										separate app
 									</span>
 								</li>
 								<li className="flex items-start">
@@ -60,7 +60,7 @@ const DifferenceSection = () => {
 										✓
 									</span>
 									<span className="text-gray-700">
-										Context-aware understanding vs. isolated
+										Remembers your context vs. isolated
 										conversations
 									</span>
 								</li>
@@ -69,8 +69,8 @@ const DifferenceSection = () => {
 										✓
 									</span>
 									<span className="text-gray-700">
-										Proactive assistance vs. reactive
-										responses
+										Becomes your second brain vs. just
+										answering questions
 									</span>
 								</li>
 							</ul>

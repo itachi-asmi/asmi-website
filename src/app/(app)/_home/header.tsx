@@ -14,7 +14,7 @@ const Header = () => {
 				<div className="flex items-center">
 					<h1 className="text-asmi-600 text-2xl font-bold">Asmi</h1>
 					<p className="ml-2 hidden text-sm text-gray-600 md:block">
-						Voice-powered AI OS
+						Your AI on WhatsApp
 					</p>
 				</div>
 
@@ -53,7 +53,7 @@ const Header = () => {
 						variant="default"
 						className="bg-asmi-600 hover:bg-asmi-700"
 					>
-						Try Asmi Free
+						Try Asmi on WhatsApp
 					</Button>
 				</div>
 
@@ -83,7 +83,7 @@ const Header = () => {
 								variant="default"
 								className="bg-asmi-600 hover:bg-asmi-700 mt-4"
 							>
-								Try Asmi Free
+								Try Asmi on WhatsApp
 							</Button>
 						</div>
 					</div>

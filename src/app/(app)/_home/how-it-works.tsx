@@ -1,5 +1,5 @@
 import React, { type ComponentType } from 'react';
-import { Brain, Mic, PlayCircle } from 'lucide-react';
+import { Brain, Clock, MessageSquare } from 'lucide-react';
 
 const Step = ({
 	number,
@@ -34,24 +34,24 @@ const HowItWorksSection = () => {
 	const steps = [
 		{
 			number: 1,
-			title: 'Capture',
+			title: 'Send or Forward Anything',
 			description:
-				'Asmi passively listens to your voice, calendar, and habits.',
-			icon: Mic,
+				'Texts, voice notes, reminders, or to-dos to Asmi on WhatsApp.',
+			icon: MessageSquare,
 		},
 		{
 			number: 2,
-			title: 'Understand',
+			title: 'Asmi Understands',
 			description:
-				'It learns your context—mood, preferences, priorities.',
+				'It learns your context—tasks, events, priorities, and preferences.',
 			icon: Brain,
 		},
 		{
 			number: 3,
-			title: 'Act',
+			title: 'Get Help Instantly',
 			description:
-				'Suggests what to do, when to do it, and helps you get it done.',
-			icon: PlayCircle,
+				'Asmi remembers what matters and answers your questions when needed.',
+			icon: Clock,
 		},
 	];
 
@@ -66,9 +66,8 @@ const HowItWorksSection = () => {
 						How It Works
 					</h2>
 					<p className="mx-auto max-w-2xl text-xl text-gray-600">
-						Asmi passively listens, understands your context, and
-						creates intelligent & fun AI agents to manage life
-						seamlessly.
+						Asmi uses AI to turn your WhatsApp into a personal
+						operating system.{' '}
 					</p>
 				</div>
 
@@ -86,15 +85,14 @@ const HowItWorksSection = () => {
 
 				<div className="mt-16 text-center">
 					<div className="bg-asmi-100 text-asmi-700 mb-4 inline-block rounded-full px-6 py-2 font-medium">
-						No friction
+						No learning curve
 					</div>
 					<h3 className="mb-4 text-2xl font-bold text-gray-900">
-						No typing. No toggling between apps. Just your voice.
+						No new app. No learning curve. Just your WhatsApp.
 					</h3>
 					<p className="mx-auto max-w-2xl text-gray-600">
-						Asmi is designed to be always available but never in the
-						way. It&apos;s the first AI that truly integrates with
-						your life.
+						Asmi is designed to seamlessly integrate with the
+						messaging app you already use every day.
 					</p>
 				</div>
 			</div>
