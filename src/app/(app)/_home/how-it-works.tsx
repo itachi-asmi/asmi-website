@@ -35,21 +35,21 @@ const HowItWorksSection = () => {
 		{
 			number: 1,
 			title: 'Send or Forward Anything',
-			description: 'Texts, voice notes, reminders, or to-dos',
+			description: 'Texts, voice notes, reminders, or tasks',
 			icon: MessageSquare,
 		},
 		{
 			number: 2,
 			title: 'Asmi Understands',
 			description:
-				'It learns your context—tasks, events, priorities, and preferences.',
+				'It learns your context—tasks, events, priorities, and store in memory.',
 			icon: Brain,
 		},
 		{
 			number: 3,
 			title: 'Get Help Instantly',
 			description:
-				'Asmi remembers what matters, creates your to-do list, reminds you at the right time, and answers your questions.',
+				'Daily plans, smart reminders, answers to questions—all deeply personalized.',
 			icon: Clock,
 		},
 	];
@@ -83,9 +83,6 @@ const HowItWorksSection = () => {
 				</div>
 
 				<div className="mt-16 text-center">
-					<div className="bg-asmi-100 text-asmi-700 mb-4 inline-block rounded-full px-6 py-2 font-medium">
-						No learning curve
-					</div>
 					<h3 className="mb-4 text-2xl font-bold text-gray-900">
 						No new app. No learning curve. Just your WhatsApp.
 					</h3>

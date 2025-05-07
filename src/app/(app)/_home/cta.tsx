@@ -46,7 +46,7 @@ const CTASection = () => {
 						</h2>
 						<p className="relative z-10 mx-auto mb-8 max-w-xl text-xl text-white/90">
 							Join thousands of early users building their
-							superhuman selves with Asmi on WhatsApp.
+							superhuman selves with Asmi on WhatsApp
 						</p>
 
 						<div className="relative z-10 flex flex-col justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
