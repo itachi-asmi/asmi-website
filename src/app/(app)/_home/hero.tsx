@@ -43,7 +43,7 @@ const HeroSection = () => {
 								<img
 									src="/images/hero.jpeg"
 									alt="Asmi AI Interface"
-									className="animate-float h-auto w-[30%] object-contain"
+									className="animate-float h-auto w-[30%] rounded-md object-contain"
 								/>
 							</div>
 						</div>
