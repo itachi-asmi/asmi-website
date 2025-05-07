@@ -53,7 +53,7 @@ const TestimonialsSection = () => {
 			role: 'Product Manager',
 		},
 		{
-			quote: "Talking to Asmi is like talking to my future self. It's organized, efficient, and somehow always knows what I need next.",
+			quote: 'Talking to Asmi is like talking to my future self. It’s organized, efficient, and somehow always knows what I need next.',
 			author: 'Tanya',
 			role: 'Creative Writer',
 		},

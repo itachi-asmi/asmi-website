@@ -35,8 +35,7 @@ const HowItWorksSection = () => {
 		{
 			number: 1,
 			title: 'Send or Forward Anything',
-			description:
-				'Texts, voice notes, reminders, or to-dos to Asmi on WhatsApp.',
+			description: 'Texts, voice notes, reminders, or to-dos',
 			icon: MessageSquare,
 		},
 		{
@@ -50,7 +49,7 @@ const HowItWorksSection = () => {
 			number: 3,
 			title: 'Get Help Instantly',
 			description:
-				'Asmi remembers what matters and answers your questions when needed.',
+				'Asmi remembers what matters, creates your to-do list, reminds you at the right time, and answers your questions.',
 			icon: Clock,
 		},
 	];
@@ -67,7 +66,7 @@ const HowItWorksSection = () => {
 					</h2>
 					<p className="mx-auto max-w-2xl text-xl text-gray-600">
 						Asmi uses AI to turn your WhatsApp into a personal
-						operating system.{' '}
+						operating system.
 					</p>
 				</div>
 

@@ -27,26 +27,24 @@ const FeaturesSection = () => {
 	const features = [
 		{
 			title: 'Daily Planner',
-			description:
-				'Sends your personalized schedule every morning based on your calendar and priorities.',
+			description: 'Sends your personalized schedule every morning.',
 			icon: CalendarDays,
 		},
 		{
 			title: 'To-Do Manager',
-			description:
-				'Creates, tracks, and reminds you of your tasks exactly when you need them.',
+			description: 'Creates, tracks, and reminds you of your tasks.',
 			icon: ListTodo,
 		},
 		{
 			title: 'Memory Keeper',
 			description:
-				"Remembers everything you've told or forwarded—ideas, links, voice notes, important info.",
+				'Remembers everything you’ve told or forwarded to it—ideas, links, voice notes, important info.',
 			icon: MessageSquare,
 		},
 		{
 			title: 'Personal Assistant',
 			description:
-				'Answers your questions with context from your own life and messaging history.',
+				'Answers your questions with context from your own life.',
 			icon: Brain,
 		},
 	];

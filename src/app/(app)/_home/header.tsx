@@ -14,7 +14,8 @@ const Header = () => {
 				<div className="flex items-center">
 					<h1 className="text-asmi-600 text-2xl font-bold">Asmi</h1>
 					<p className="ml-2 hidden text-sm text-gray-600 md:block">
-						Your AI on WhatsApp
+						Your AI that listens, remembers, and helps you run your
+						life—all on WhatsApp.
 					</p>
 				</div>
 

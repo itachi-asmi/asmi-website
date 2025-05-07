@@ -20,7 +20,10 @@ const HeroSection = () => {
 						<p className="mb-8 max-w-lg text-xl text-gray-600">
 							Just send it a message—voice or text—and it takes
 							care of the rest. Whether it&apos;s a quick note, a
-							to-do, or something you want to remember.
+							to-do, or something you want it to remember, Asmi
+							listens, understands, and acts. It even sends you a
+							daily plan each morning, talks and make
+							recommendations to you based your personal conext.
 						</p>
 						<div className="flex flex-col gap-4 sm:flex-row">
 							<Button className="bg-asmi-600 hover:bg-asmi-700 flex items-center rounded-lg px-8 py-6 text-lg text-white">
