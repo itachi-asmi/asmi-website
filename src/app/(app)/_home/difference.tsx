@@ -29,9 +29,6 @@ const DifferenceSection = () => {
 						<h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
 							Why Asmi Is Different
 						</h2>
-						<h3 className="text-asmi-600 mb-4 text-2xl font-semibold">
-							Starts on WhatsApp. Built Around Your Life.
-						</h3>
 
 						<p className="mb-6 text-lg text-gray-600">
 							Most AI tools need apps and effort. Asmi lives where

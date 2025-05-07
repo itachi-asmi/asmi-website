@@ -1,5 +1,5 @@
 import React from 'react';
-import { Quote, Star } from 'lucide-react';
+import { Quote } from 'lucide-react';
 
 const TestimonialCard = ({
 	quote,
@@ -12,7 +12,7 @@ const TestimonialCard = ({
 }) => {
 	return (
 		<div className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-md">
-			<div className="mb-4 flex">
+			{/* <div className="mb-4 flex">
 				{[1, 2, 3, 4, 5].map((star) => (
 					<Star
 						key={star}
@@ -20,7 +20,7 @@ const TestimonialCard = ({
 						className="mr-1 fill-yellow-400 text-yellow-400"
 					/>
 				))}
-			</div>
+			</div> */}
 			<div className="relative">
 				<Quote className="text-asmi-100 absolute -left-2 -top-2 size-8 opacity-50" />
 				<p className="relative z-10 mb-6 italic text-gray-700">
@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
 		},
 		{
 			quote: 'Asmi helps me stay on top of everything—personal and work. I no longer forget things I tell myself in the middle of the day.',
-			author: 'Rajeev',
+			author: 'Eric',
 			role: 'Product Manager',
 		},
 		{

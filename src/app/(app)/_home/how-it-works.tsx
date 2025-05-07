@@ -42,12 +42,12 @@ const HowItWorksSection = () => {
 			number: 2,
 			title: 'Asmi Understands',
 			description:
-				'It learns your context—tasks, events, priorities, and store in memory.',
+				'It learns your context—tasks, events, priorities, and stores in memory.',
 			icon: Brain,
 		},
 		{
 			number: 3,
-			title: 'Get Help Instantly',
+			title: 'Your Life, Organized Instantly',
 			description:
 				'Daily plans, smart reminders, answers to questions—all deeply personalized.',
 			icon: Clock,
@@ -82,7 +82,7 @@ const HowItWorksSection = () => {
 					))}
 				</div>
 
-				<div className="mt-16 text-center">
+				{/* <div className="mt-16 text-center">
 					<h3 className="mb-4 text-2xl font-bold text-gray-900">
 						No new app. No learning curve. Just your WhatsApp.
 					</h3>
@@ -90,7 +90,7 @@ const HowItWorksSection = () => {
 						Asmi is designed to seamlessly integrate with the
 						messaging app you already use every day.
 					</p>
-				</div>
+				</div> */}
 			</div>
 
 			{/* Background elements */}

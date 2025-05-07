@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 import { Button } from '../../../ui/button';
 
@@ -24,16 +24,17 @@ const HeroSection = () => {
 						</p>
 						<div className="flex flex-col gap-4 sm:flex-row">
 							<Button className="bg-asmi-600 hover:bg-asmi-700 flex items-center rounded-lg px-8 py-6 text-lg text-white">
-								Try Asmi Free on WhatsApp
+								{/* Try Asmi Free on WhatsApp */}
+								Join the Waitlist
 								<ArrowRight className="ml-2 size-5" />
 							</Button>
-							<Button
+							{/* <Button
 								variant="outline"
 								className="border-asmi-300 text-asmi-700 hover:bg-asmi-50 flex items-center rounded-lg px-8 py-6 text-lg"
 							>
 								<Play className="mr-2 size-5" />
 								Watch Demo
-							</Button>
+							</Button> */}
 						</div>
 					</div>
 

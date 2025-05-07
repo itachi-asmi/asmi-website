@@ -32,7 +32,7 @@ const FeaturesSection = () => {
 		},
 		{
 			title: 'To-Do Manager',
-			description: 'Creates, tracks, and reminds you of your tasks.',
+			description: 'Creates, tracks, and reminds you of important tasks.',
 			icon: ListTodo,
 		},
 		{
@@ -44,7 +44,7 @@ const FeaturesSection = () => {
 		{
 			title: 'Personal AI',
 			description:
-				'Ask anything. Gives answers tailored to your life, not just from internet.',
+				'Ask anything. It gives answers tailored to your life, not just from internet.',
 			icon: Brain,
 		},
 	];
@@ -76,20 +76,19 @@ const FeaturesSection = () => {
 					<div className="flex flex-col items-center md:flex-row">
 						<div className="mb-8 md:mb-0 md:mr-8 md:w-3/4">
 							<h3 className="mb-4 text-2xl font-bold text-white md:text-3xl">
-								All over WhatsApp. All personalized just for
-								you.
+								No new app. No learning curve. Just your
+								WhatsApp.
 							</h3>
 							<p className="text-lg text-white/80">
-								Asmi integrates every aspect of your life right
-								where your conversations already happen. No new
-								app. No learning curve. Just your WhatsApp.
+								Asmi is designed to seamlessly integrate with
+								the messaging app you already use every day.
 							</p>
 						</div>
 						<div className="flex justify-center md:w-1/4">
 							<img
-								src="/images/0f7e42be-2cd4-4219-98a2-1a0e289a9383.png"
+								src="/images/whatsapp.jpeg"
 								alt="Asmi on WhatsApp"
-								className="size-24 rounded-full bg-white object-contain p-2"
+								className="size-24 rounded-full bg-white object-contain"
 							/>
 						</div>
 					</div>
@@ -100,3 +99,5 @@ const FeaturesSection = () => {
 };
 
 export default FeaturesSection;
+
+// cname	www	pointing.wixdns.net.	1/2 Hour

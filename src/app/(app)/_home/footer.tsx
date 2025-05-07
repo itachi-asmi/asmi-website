@@ -8,12 +8,14 @@ const Footer = () => {
 				<div className="flex flex-col justify-between md:flex-row">
 					<div className="mb-8 md:mb-0">
 						<div className="mb-4 flex items-center">
-							<h2 className="text-asmi-600 mr-2 text-2xl font-bold">
-								Asmi
-							</h2>
-							<span className="text-sm text-gray-500">
+							<img
+								src="/images/logo.png"
+								alt="Asmi Logo"
+								className="h-8 w-auto"
+							/>
+							{/* <span className="text-sm text-gray-500">
 								• Personal Assistant on WhatsApp
-							</span>
+							</span> */}
 						</div>
 						<p className="max-w-xs text-gray-600">
 							Your AI that listens, remembers, and helps you run
@@ -43,7 +45,7 @@ const Footer = () => {
 										How it Works
 									</a>
 								</li>
-								<li>
+								{/* <li>
 									<a
 										href="#"
 										className="hover:text-asmi-600 text-gray-600 transition-colors"
@@ -58,7 +60,7 @@ const Footer = () => {
 									>
 										FAQ
 									</a>
-								</li>
+								</li> */}
 							</ul>
 						</div>
 						<div>
@@ -74,7 +76,7 @@ const Footer = () => {
 										About
 									</a>
 								</li>
-								<li>
+								{/* <li>
 									<a
 										href="#"
 										className="hover:text-asmi-600 text-gray-600 transition-colors"
@@ -97,10 +99,10 @@ const Footer = () => {
 									>
 										Press
 									</a>
-								</li>
+								</li> */}
 							</ul>
 						</div>
-						<div>
+						{/* <div>
 							<h3 className="mb-4 font-semibold text-gray-900">
 								Resources
 							</h3>
@@ -138,7 +140,7 @@ const Footer = () => {
 									</a>
 								</li>
 							</ul>
-						</div>
+						</div> */}
 						<div>
 							<h3 className="mb-4 font-semibold text-gray-900">
 								Connect
