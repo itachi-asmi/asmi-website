@@ -10,12 +10,19 @@ const DifferenceSection = () => {
 							<div className="from-asmi-300 to-asmi-500 h-[400px] w-full overflow-hidden rounded-xl bg-gradient-to-br shadow-lg">
 								<div className="absolute inset-0 flex items-center justify-center">
 									<div className="p-8 text-center">
-										<h3 className="mb-4 text-3xl font-bold text-white">
-											Starts on WhatsApp
+										<h3 className="mb-4 text-2xl font-bold text-white lg:text-3xl">
+											<span className="block">
+												Steve Chen,
+											</span>
+											<span>YouTube Founder</span>
 										</h3>
-										<p className="text-lg text-white/90">
-											Built around your life. Where your
-											life already happens—on WhatsApp.
+										<p className="text-md text-white/90 lg:text-lg">
+											“Love the idea! I’ve always dreamed
+											of a tool that captures my thoughts
+											and surroundings, organizing them
+											with AI. Asmi brings that vision to
+											life—it’s like having a digital
+											memory that thinks for me.”
 										</p>
 									</div>
 								</div>

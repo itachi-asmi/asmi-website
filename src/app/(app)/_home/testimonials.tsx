@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
 		{
 			quote: 'I forward everything to Asmi—ideas, links, voice notes. It remembers everything and reminds me exactly when I need it.',
 			author: 'Sneha',
-			role: 'Working Professional',
+			role: 'Investor',
 		},
 		{
 			quote: 'Asmi helps me stay on top of everything—personal and work. I no longer forget things I tell myself in the middle of the day.',

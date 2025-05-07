@@ -26,7 +26,7 @@ const HeroSection = () => {
 
 					<div className="animate-fade-in relative md:w-1/2">
 						<div className="relative z-10">
-							<div className="from-asmi-200 to-asmi-400 flex h-[400px] w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br shadow-xl md:h-[500px]">
+							<div className="from-asmi-200 to-asmi-400 flex h-[400px] w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br py-4 shadow-xl md:h-[500px]">
 								{/* <img
 									src="/images/hero.png"
 									alt="Asmi AI Interface"
@@ -39,7 +39,7 @@ const HeroSection = () => {
 									muted
 									playsInline
 									preload="auto"
-									className="size-full rounded-md object-cover"
+									className="size-full rounded-md object-contain"
 								/>
 							</div>
 						</div>
