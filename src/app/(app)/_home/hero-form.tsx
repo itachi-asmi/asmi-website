@@ -116,8 +116,12 @@ export default function HeroForm({
 						waitlistClasses
 					)}
 				>
-					You will hear from us soon. Your queue number :{' '}
-					<span className="text-xl font-semibold">{waitlistId}</span>
+					You’re in, superstar!
+					<span className="text-xl font-semibold">
+						{' '}
+						#{waitlistId}
+					</span>{' '}
+					in line. Magic’s brewing—stay tuned.
 				</motion.div>
 			)}
 		</div>
