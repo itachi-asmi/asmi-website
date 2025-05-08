@@ -3,8 +3,6 @@
 import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
 
-import { Button } from '../../../ui/button';
-
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -50,14 +48,14 @@ const Header = () => {
 					</a>
 				</nav>
 
-				<div className="hidden md:block">
+				{/* <div className="hidden md:block">
 					<Button
 						variant="default"
 						className="bg-asmi-600 hover:bg-asmi-700"
 					>
 						Try Asmi on WhatsApp
 					</Button>
-				</div>
+				</div> */}
 
 				{/* Mobile menu */}
 				{isMenuOpen && (
@@ -81,12 +79,12 @@ const Header = () => {
 							>
 								Testimonials
 							</a>
-							<Button
+							{/* <Button
 								variant="default"
 								className="bg-asmi-600 hover:bg-asmi-700 mt-4"
 							>
 								Try Asmi on WhatsApp
-							</Button>
+							</Button> */}
 						</div>
 					</div>
 				)}
