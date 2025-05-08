@@ -71,9 +71,9 @@ const NameSlider = () => {
 		<span className="relative inline-block align-baseline">
 			<motion.span
 				key={names[index]}
-				initial={{ y: 24, opacity: 0 }}
+				initial={{ y: 0, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
-				exit={{ y: -24, opacity: 0 }}
+				exit={{ y: 0, opacity: 0 }}
 				transition={{ duration: 0.5, ease: 'easeInOut' }}
 				className="absolute inset-x-0 -top-[21px] text-center text-xl font-semibold text-white"
 			>
@@ -161,17 +161,18 @@ const Waitlist = () => {
 					{/* Welcome message - moved to the top */}
 					<div className="from-asmi-800 to-asmi-600 mb-16 rounded-2xl bg-gradient-to-r p-8 text-center text-white shadow-lg md:p-12">
 						<h2 className="animate-fade-in mb-6 text-3xl font-bold md:text-4xl">
-							Welcome, my superstar.
+							Welcome, My Superstar.
 						</h2>
-
-						<div className="mb-2 gap-2 text-xl leading-relaxed  md:text-2xl">
-							You&apos;ll soon be part of the same tribe as{' '}
-							{<NameSlider />}
+						<div className="mb-4 flex flex-col items-center justify-center text-xl leading-6 md:flex-row md:gap-1 md:text-2xl ">
+							<span>You&apos;ll soon be part of the same </span>
+							<span className="relative -left-[20px] md:left-0">
+								tribe as {<NameSlider />}
+							</span>
 						</div>
 						<div className="mb-8 block text-xl md:text-2xl">
-							Magic is brewing—you&apos;re{' '}
-							<span className="font-bold">#{waitlistId}</span> the
-							queue and climbing.
+							You&apos;re{' '}
+							<span className="font-bold">#{waitlistId} </span>in
+							the queue and climbing
 						</div>
 
 						<div className="animate-[pulse_3s_ease-in-out_infinite]">
