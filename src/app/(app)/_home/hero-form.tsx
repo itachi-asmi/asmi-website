@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
@@ -37,7 +37,14 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
+	useEffect(() => {
+		router.prefetch('/waitlist');
+	}, [router]);
+
 	const onSubmit = async (values: { email: string }) => {
+		if (!isSubmitting) {
+			router.push('/waitlist');
+		}
 		const payload = {
 			email: values.email,
 		};
@@ -55,11 +62,11 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 					type: 'manual',
 					message: response?.data?.detail,
 				});
+				router.back();
 			}
 
 			if (response.status === 201) {
 				setWaitlistId(response.data?.id);
-				router.push('/waitlist');
 				toast.success(response?.data?.detail);
 				form.reset();
 			}

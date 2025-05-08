@@ -1,5 +1,3 @@
-import React from 'react';
-
 import CTASection from './_home/cta';
 import DifferenceSection from './_home/difference';
 import FeaturesSection from './_home/features';
@@ -9,7 +7,7 @@ import HeroSection from './_home/hero';
 import HowItWorksSection from './_home/how-it-works';
 import TestimonialsSection from './_home/testimonials';
 
-const Page = () => {
+export default async function Home() {
 	return (
 		<div className="min-h-screen bg-white">
 			<Header />
@@ -22,6 +20,4 @@ const Page = () => {
 			<Footer />
 		</div>
 	);
-};
-
-export default Page;
+}
