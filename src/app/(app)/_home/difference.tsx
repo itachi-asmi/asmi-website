@@ -9,34 +9,18 @@ const DifferenceSection = () => {
 						<div className="relative">
 							<div className="from-asmi-300 to-asmi-500 h-[400px] w-full overflow-hidden rounded-xl bg-gradient-to-br shadow-lg">
 								<div className="absolute inset-0 flex items-center justify-center">
-									<div className="p-8 text-center">
-										<blockquote className="relative text-xl italic text-white/90 lg:text-2xl">
-											<svg
-												className="mx-auto mb-4 size-8 text-white/50"
-												fill="currentColor"
-												viewBox="0 0 24 24"
-											>
-												<path d="M7.17 6A5.001 5.001 0 002 11v5a1 1 0 001 1h4a1 1 0 001-1v-5a1 1 0 00-1-1H4a3 3 0 013.17-4zM17.17 6A5.001 5.001 0 0012 11v5a1 1 0 001 1h4a1 1 0 001-1v-5a1 1 0 00-1-1h-3a3 3 0 013.17-4z" />
-											</svg>
-											<p>
-												“Love the idea! I’ve always
-												dreamed of a tool that captures
-												my thoughts and surroundings,
-												organizing them with AI. Asmi
-												brings that vision to life—it’s
-												like having a digital memory
-												that thinks for me.”
-											</p>
-										</blockquote>
-										<footer className="mt-6 flex items-center justify-center gap-2 font-semibold text-white">
-											<span className="text-xl leading-none">
-												—
-											</span>
-											<span>Steve Chen</span>
-											<span className="text-sm font-normal text-white/70">
-												(YouTube Founder)
-											</span>
-										</footer>
+									<div className="flex flex-col items-center justify-center gap-6 p-8 text-center">
+										<p className="relative text-xl italic text-white/90 lg:text-2xl">
+											No new app. No learning curve. Just
+											your WhatsApp.
+										</p>
+										<div className="flex items-center justify-center md:w-1/4">
+											<img
+												src="/images/whatsapp.png"
+												alt="Asmi on WhatsApp"
+												className="size-24 rounded-full bg-white object-contain"
+											/>
+										</div>
 									</div>
 								</div>
 							</div>

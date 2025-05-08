@@ -69,7 +69,7 @@ const FeaturesSection = () => {
 					))}
 				</div>
 
-				<div className="from-asmi-500 to-asmi-700 mx-auto mt-16 max-w-5xl rounded-2xl bg-gradient-to-r p-8 shadow-lg md:p-12">
+				{/* <div className="from-asmi-500 to-asmi-700 mx-auto mt-16 max-w-5xl rounded-2xl bg-gradient-to-r p-8 shadow-lg md:p-12">
 					<div className="flex flex-col items-center md:flex-row">
 						<div className="mb-8 md:mb-0 md:mr-8 md:w-3/4">
 							<h3 className="mb-4 text-2xl font-bold text-white md:text-3xl">
@@ -89,7 +89,7 @@ const FeaturesSection = () => {
 							/>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);

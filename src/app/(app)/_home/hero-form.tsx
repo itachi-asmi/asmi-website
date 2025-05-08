@@ -3,8 +3,8 @@
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useAction } from 'next-safe-action/hooks';
 import { toast } from 'sonner';
 import { z } from 'zod';
@@ -26,13 +26,7 @@ const schema = z.object({
 	email: z.string().email({ message: 'Invalid email address' }),
 });
 
-export default function HeroForm({
-	btnClasses,
-	waitlistClasses,
-}: {
-	btnClasses?: string;
-	waitlistClasses?: string;
-}) {
+export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 	const form = useForm({
 		resolver: zodResolver(schema),
 		defaultValues: {
@@ -40,7 +34,8 @@ export default function HeroForm({
 		},
 	});
 	const { execute, result, isExecuting } = useAction(waitlistAction);
-	const { waitlistId, setWaitlistId } = useUiStore();
+	const { setWaitlistId } = useUiStore();
+	const router = useRouter();
 
 	useEffect(() => {
 		if (!result.data) {
@@ -55,9 +50,10 @@ export default function HeroForm({
 		}
 
 		if (result.data.statusCode === 201) {
-			toast.success(result.data?.data?.detail);
 			setWaitlistId(result.data.data.id);
+			toast.success(result.data?.data?.detail);
 			form.reset();
+			router.push('/waitlist');
 		}
 	}, [form, result]);
 
@@ -89,7 +85,7 @@ export default function HeroForm({
 										{...field}
 									/>
 								</FormControl>
-								<FormMessage className="!mt-1" />
+								<FormMessage className="!mt-1 text-left" />
 							</FormItem>
 						)}
 					/>
@@ -105,7 +101,7 @@ export default function HeroForm({
 					</Button>
 				</form>
 			</Form>
-			{waitlistId && (
+			{/* {waitlistId && (
 				<motion.div
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -123,7 +119,7 @@ export default function HeroForm({
 					</span>{' '}
 					in line. Magic’s brewing—stay tuned.
 				</motion.div>
-			)}
+			)} */}
 		</div>
 	);
 }
