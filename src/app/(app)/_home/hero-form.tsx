@@ -94,7 +94,7 @@ export default function HeroForm({
 						)}
 					/>
 					<Button
-						disabled={isExecuting || !!waitlistId}
+						disabled={isExecuting}
 						className={cn(
 							'bg-asmi-600 hover:bg-asmi-700 z-10 flex items-center gap-2 rounded-lg px-4 py-6 text-lg text-white',
 							btnClasses
@@ -111,7 +111,7 @@ export default function HeroForm({
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: 10 }}
 					transition={{ duration: 0.4, ease: 'easeOut' }}
-					className={cn('mt-4 text-lg', waitlistClasses)}
+					className={cn('mt-4 text-center text-lg', waitlistClasses)}
 				>
 					You will hear from us soon. Your queue number :{' '}
 					<span className="text-xl font-semibold">{waitlistId}</span>
