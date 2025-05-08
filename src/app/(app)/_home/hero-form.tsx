@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import axios from 'axios';
 import { ArrowRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useAction } from 'next-safe-action/hooks';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
@@ -20,7 +20,6 @@ import {
 	FormMessage,
 } from '../../../ui/form';
 import { Input } from '../../../ui/input';
-import { waitlistAction } from '../_actions/waitlist';
 
 const schema = z.object({
 	email: z.string().email({ message: 'Invalid email address' }),
@@ -33,35 +32,42 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 			email: '',
 		},
 	});
-	const { execute, result, isExecuting } = useAction(waitlistAction);
 	const { setWaitlistId } = useUiStore();
 	const router = useRouter();
 
-	useEffect(() => {
-		if (!result.data) {
-			return;
-		}
-
-		if (result.data.statusCode === 200) {
-			form.setError('email', {
-				type: 'manual',
-				message: result.data?.data?.detail,
-			});
-		}
-
-		if (result.data.statusCode === 201) {
-			setWaitlistId(result.data.data.id);
-			toast.success(result.data?.data?.detail);
-			form.reset();
-			router.push('/waitlist');
-		}
-	}, [form, result]);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const onSubmit = async (values: { email: string }) => {
 		const payload = {
 			email: values.email,
 		};
-		execute(payload);
+
+		setIsSubmitting(true);
+
+		try {
+			const response = await axios.post(
+				`${process.env.NEXT_PUBLIC_BASE_PATH}prospective/waitlist/join/`,
+				payload
+			);
+
+			if (response.status === 200) {
+				form.setError('email', {
+					type: 'manual',
+					message: response?.data?.detail,
+				});
+			}
+
+			if (response.status === 201) {
+				setWaitlistId(response.data?.id);
+				router.push('/waitlist');
+				toast.success(response?.data?.detail);
+				form.reset();
+			}
+		} catch (error) {
+			console.error('Error during form submission:', error);
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -90,7 +96,7 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 						)}
 					/>
 					<Button
-						disabled={isExecuting}
+						disabled={isSubmitting}
 						className={cn(
 							'bg-asmi-600 hover:bg-asmi-700 z-10 flex items-center gap-2 rounded-lg px-4 py-6 text-lg text-white',
 							btnClasses
@@ -101,25 +107,6 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 					</Button>
 				</form>
 			</Form>
-			{/* {waitlistId && (
-				<motion.div
-					initial={{ opacity: 0, y: 10 }}
-					animate={{ opacity: 1, y: 0 }}
-					exit={{ opacity: 0, y: 10 }}
-					transition={{ duration: 0.4, ease: 'easeOut' }}
-					className={cn(
-						'mt-4 text-center text-lg md:text-start',
-						waitlistClasses
-					)}
-				>
-					You’re in, superstar!
-					<span className="text-xl font-semibold">
-						{' '}
-						#{waitlistId}
-					</span>{' '}
-					in line. Magic’s brewing—stay tuned.
-				</motion.div>
-			)} */}
 		</div>
 	);
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { MessageSquare, Twitter } from 'lucide-react';
 
 const Footer = () => {
 	return (
@@ -147,16 +146,10 @@ const Footer = () => {
 							</h3>
 							<div className="flex space-x-4">
 								<a
-									href="#"
+									href="mailto:rishi@asmiai.com"
 									className="hover:text-asmi-600 text-gray-600 transition-colors"
 								>
-									<Twitter size={20} />
-								</a>
-								<a
-									href="#"
-									className="hover:text-asmi-600 text-gray-600 transition-colors"
-								>
-									<MessageSquare size={20} />
+									rishi@asmiai.com
 								</a>
 							</div>
 						</div>

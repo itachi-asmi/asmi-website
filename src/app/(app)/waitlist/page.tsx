@@ -63,19 +63,19 @@ const NameSlider = () => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setIndex((prev) => (prev + 1) % names.length);
-		}, 2000);
+		}, 1000);
 		return () => clearInterval(interval);
 	}, []);
 
 	return (
-		<span className="relative inline-block align-baseline">
+		<span className="relative ml-2 inline-block align-baseline">
 			<motion.span
 				key={names[index]}
 				initial={{ y: 0, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				exit={{ y: 0, opacity: 0 }}
 				transition={{ duration: 0.5, ease: 'easeInOut' }}
-				className="absolute inset-x-0 -top-[21px] text-center text-xl font-semibold text-white"
+				className="absolute inset-x-0 -top-[29px] text-center text-3xl font-semibold text-white"
 			>
 				{names[index]}
 			</motion.span>
@@ -161,18 +161,18 @@ const Waitlist = () => {
 					{/* Welcome message - moved to the top */}
 					<div className="from-asmi-800 to-asmi-600 mb-16 rounded-2xl bg-gradient-to-r p-8 text-center text-white shadow-lg md:p-12">
 						<h2 className="animate-fade-in mb-6 text-3xl font-bold md:text-4xl">
-							Welcome, My Superstar.
+							Welcome, Superstar.
 						</h2>
-						<div className="mb-4 flex flex-col items-center justify-center text-xl leading-6 md:flex-row md:gap-1 md:text-2xl ">
+						<div className="mb-4 flex flex-col items-center justify-center text-xl leading-9 md:flex-row md:gap-1 md:text-2xl ">
 							<span>You&apos;ll soon be part of the same </span>
-							<span className="relative -left-[20px] md:left-0">
+							<span className="relative -left-[32px] md:left-0">
 								tribe as {<NameSlider />}
 							</span>
 						</div>
 						<div className="mb-8 block text-xl md:text-2xl">
 							You&apos;re{' '}
 							<span className="font-bold">#{waitlistId} </span>in
-							the queue and climbing
+							line and moving
 						</div>
 
 						<div className="animate-[pulse_3s_ease-in-out_infinite]">

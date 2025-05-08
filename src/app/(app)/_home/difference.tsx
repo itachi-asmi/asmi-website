@@ -7,20 +7,22 @@ const DifferenceSection = () => {
 				<div className="flex flex-col items-center lg:flex-row">
 					<div className="mb-10 w-full lg:mb-0 lg:w-1/2">
 						<div className="relative">
-							<div className="from-asmi-300 to-asmi-500 h-[400px] w-full overflow-hidden rounded-xl bg-gradient-to-br shadow-lg">
+							<div className="from-asmi-400 to-asmi-700 h-[400px] w-full overflow-hidden rounded-xl bg-gradient-to-br shadow-lg">
 								<div className="absolute inset-0 flex items-center justify-center">
-									<div className="flex flex-col items-center justify-center gap-6 p-8 text-center">
-										<p className="relative text-xl italic text-white/90 lg:text-2xl">
-											No new app. No learning curve. Just
-											your WhatsApp.
+									<div className="flex w-full flex-col items-center justify-center gap-1 p-8 text-center">
+										<p className="relative mb-2 flex flex-1 flex-col items-start justify-start gap-3 text-[20px] italic text-white/90 lg:text-3xl">
+											No new app. No learning curve.
 										</p>
 										<div className="flex items-center justify-center md:w-1/4">
 											<img
 												src="/images/whatsapp.png"
 												alt="Asmi on WhatsApp"
-												className="size-24 rounded-full bg-white object-contain"
+												className="size-24 rounded-full object-contain lg:size-24"
 											/>
 										</div>
+										<p className="relative flex flex-1 flex-col items-start justify-start gap-3 text-[28px] font-semibold italic text-white/90 lg:text-[42px]">
+											Just your WhatsApp
+										</p>
 									</div>
 								</div>
 							</div>
