@@ -8,7 +8,7 @@ export default function Providers({ children }: { children: ReactNode }) {
 	return (
 		<>
 			{children}
-			<Toaster />
+			<Toaster closeButton richColors position="bottom-left" />
 		</>
 	);
 }

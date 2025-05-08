@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 
-import { Button } from '../../../ui/button';
+import HeroForm from './hero-form';
 
 const CTASection = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -50,16 +49,10 @@ const CTASection = () => {
 						</p>
 
 						<div className="relative z-10 flex flex-col justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-							<Button className="text-asmi-700 flex items-center justify-center rounded-full bg-white px-8 py-6 text-lg shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-100 hover:shadow-xl">
-								Start Chatting with Asmi
-								<ArrowRight className="ml-2 size-5" />
-							</Button>
-							<Button
-								variant="outline"
-								className="flex items-center justify-center rounded-lg border-white px-8 py-6 text-lg"
-							>
-								Join Waitlist
-							</Button>
+							<HeroForm
+								btnClasses="bg-white text-black"
+								waitlistClasses="text-white"
+							/>
 						</div>
 					</div>
 
