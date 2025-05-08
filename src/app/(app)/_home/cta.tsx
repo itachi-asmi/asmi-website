@@ -49,10 +49,7 @@ const CTASection = () => {
 						</p>
 
 						<div className="relative z-10 flex flex-col justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-							<HeroForm
-								btnClasses="bg-white text-black"
-								waitlistClasses="text-white"
-							/>
+							<HeroForm btnClasses="bg-white text-black" />
 						</div>
 					</div>
 
