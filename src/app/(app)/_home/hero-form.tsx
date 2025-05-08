@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useAction } from 'next-safe-action/hooks';
 import { toast } from 'sonner';
@@ -69,47 +70,52 @@ export default function HeroForm({
 
 	return (
 		<div className="relative z-10">
-			{waitlistId ? (
-				<div className={cn('text-lg', waitlistClasses)}>
+			<Form {...form}>
+				<form
+					onSubmit={form.handleSubmit(onSubmit)}
+					className="flex flex-col gap-4 sm:flex-row"
+				>
+					<FormField
+						control={form.control}
+						name="email"
+						render={({ field }) => (
+							<FormItem className="relative">
+								<FormControl>
+									<Input
+										placeholder="Enter Email Address"
+										type="email"
+										id="email"
+										className="md:w-[240px] lg:w-[340px]"
+										{...field}
+									/>
+								</FormControl>
+								<FormMessage className="!mt-1" />
+							</FormItem>
+						)}
+					/>
+					<Button
+						disabled={isExecuting || !!waitlistId}
+						className={cn(
+							'bg-asmi-600 hover:bg-asmi-700 z-10 flex items-center gap-2 rounded-lg px-4 py-6 text-lg text-white',
+							btnClasses
+						)}
+					>
+						<span>Join the Waitlist</span>
+						<ArrowRight className="ml-1 size-5" />
+					</Button>
+				</form>
+			</Form>
+			{waitlistId && (
+				<motion.div
+					initial={{ opacity: 0, y: 10 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0, y: 10 }}
+					transition={{ duration: 0.4, ease: 'easeOut' }}
+					className={cn('mt-4 text-lg', waitlistClasses)}
+				>
 					You will hear from us soon. Your queue number :{' '}
 					<span className="text-xl font-semibold">{waitlistId}</span>
-				</div>
-			) : (
-				<Form {...form}>
-					<form
-						onSubmit={form.handleSubmit(onSubmit)}
-						className="flex flex-col gap-4 sm:flex-row"
-					>
-						<FormField
-							control={form.control}
-							name="email"
-							render={({ field }) => (
-								<FormItem className="relative">
-									<FormControl>
-										<Input
-											placeholder="Enter Email Address"
-											type="email"
-											id="email"
-											className="md:w-[240px] lg:w-[340px]"
-											{...field}
-										/>
-									</FormControl>
-									<FormMessage className="!mt-1" />
-								</FormItem>
-							)}
-						/>
-						<Button
-							disabled={isExecuting}
-							className={cn(
-								'bg-asmi-600 hover:bg-asmi-700 z-10 flex items-center gap-2 rounded-lg px-4 py-6 text-lg text-white',
-								btnClasses
-							)}
-						>
-							<span>Join the Waitlist</span>
-							<ArrowRight className="ml-1 size-5" />
-						</Button>
-					</form>
-				</Form>
+				</motion.div>
 			)}
 		</div>
 	);
