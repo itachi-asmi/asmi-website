@@ -111,7 +111,10 @@ export default function HeroForm({
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: 10 }}
 					transition={{ duration: 0.4, ease: 'easeOut' }}
-					className={cn('mt-4 text-center text-lg', waitlistClasses)}
+					className={cn(
+						'mt-4 text-center text-lg md:text-start',
+						waitlistClasses
+					)}
 				>
 					You will hear from us soon. Your queue number :{' '}
 					<span className="text-xl font-semibold">{waitlistId}</span>
