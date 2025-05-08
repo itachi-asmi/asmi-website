@@ -59,7 +59,6 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 					type: 'manual',
 					message: response?.data?.detail,
 				});
-				router.back();
 			}
 
 			if (response.status === 201) {
