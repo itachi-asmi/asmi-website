@@ -1,11 +1,12 @@
 'use client';
 
 import { ArrowLeft } from 'lucide-react';
-import router from 'next/router';
+import { useRouter } from 'next/navigation';
 
 import { Button } from '../../../../ui/button';
 
 export default function BackButton() {
+	const router = useRouter();
 	return (
 		<div className="mb-8">
 			<Button

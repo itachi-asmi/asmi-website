@@ -7,6 +7,8 @@ import HeroSection from './_home/hero';
 import HowItWorksSection from './_home/how-it-works';
 import TestimonialsSection from './_home/testimonials';
 
+export const revalidate = 60;
+
 export default async function Home() {
 	return (
 		<div className="min-h-screen bg-white">
