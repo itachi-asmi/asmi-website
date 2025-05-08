@@ -42,9 +42,6 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 	}, [router]);
 
 	const onSubmit = async (values: { email: string }) => {
-		if (!isSubmitting) {
-			router.push('/waitlist');
-		}
 		const payload = {
 			email: values.email,
 		};
@@ -66,6 +63,7 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 			}
 
 			if (response.status === 201) {
+				router.push('/waitlist');
 				setWaitlistId(response.data?.id);
 				toast.success(response?.data?.detail);
 				form.reset();
