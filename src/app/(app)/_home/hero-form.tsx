@@ -36,31 +36,31 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 	const router = useRouter();
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
-	// const [hasFetchedCount, setHasFetchedCount] = useState(false);
+	const [hasFetchedCount, setHasFetchedCount] = useState(false);
 
 	useEffect(() => {
 		router.prefetch('/waitlist');
 	}, [router]);
 
-	// const fetchWaitlistCount = async (): Promise<number | null> => {
-	// 	try {
-	// 		const response = await axios.get(
-	// 			`${process.env.NEXT_PUBLIC_BASE_PATH}prospective/waitlist/count/`
-	// 		);
-	// 		console.log('Waitlist count:', response.data?.count);
-	// 		return response.data?.count ?? null;
-	// 	} catch (error) {
-	// 		console.error('Failed to fetch waitlist count:', error);
-	// 		return null;
-	// 	}
-	// };
+	const fetchWaitlistCount = async (): Promise<number | null> => {
+		try {
+			const response = await axios.get(
+				`${process.env.NEXT_PUBLIC_BASE_PATH}prospective/waitlist/count/`
+			);
+			console.log('Waitlist count:', response.data?.count);
+			return response.data?.count ?? null;
+		} catch (error) {
+			console.error('Failed to fetch waitlist count:', error);
+			return null;
+		}
+	};
 
-	// const handleInputFocus = async () => {
-	// 	if (!hasFetchedCount) {
-	// 		setHasFetchedCount(true);
-	// 		await fetchWaitlistCount();
-	// 	}
-	// };
+	const handleInputFocus = async () => {
+		if (!hasFetchedCount) {
+			setHasFetchedCount(true);
+			await fetchWaitlistCount();
+		}
+	};
 
 	const onSubmit = async (values: { email: string }) => {
 		const payload = {
@@ -113,7 +113,7 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 										type="text"
 										id="email"
 										className="md:w-[240px] lg:w-[340px]"
-										// onFocus={handleInputFocus}
+										onFocus={handleInputFocus}
 										{...field}
 									/>
 								</FormControl>
