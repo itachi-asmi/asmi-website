@@ -23,7 +23,7 @@ export const generateMetadata = (): Metadata => ({
 	icons: {
 		icon: '/favicon/favicon.ico',
 		shortcut: '/favicon/favicon-16x16.png',
-		apple: '/favicon/apple-touch-icon.png',
+		apple: '/favicon/apple-icon.png',
 	},
 	verification: {
 		// google: siteConfig.googleSiteVerificationId(),
@@ -33,14 +33,14 @@ export const generateMetadata = (): Metadata => ({
 		title: siteConfig.title,
 		description: siteConfig.description,
 		siteName: siteConfig.title,
-		images: '/favicon/icon-512-maskable.png',
+		images: '/favicon/apple-icon.png',
 		type: 'website',
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfig.title,
 		description: siteConfig.description,
-		images: '/favicon/icon-512-maskable.png',
+		images: '/favicon/apple-icon.png',
 	},
 });
 
