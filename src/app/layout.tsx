@@ -64,14 +64,7 @@ export const generateMetadata = (): Metadata => ({
 		title: siteConfig.title,
 		description: siteConfig.description,
 		siteName: siteConfig.title,
-		images: [
-			{
-				url: '/images/logo-og.png',
-				width: 1200,
-				height: 630,
-				alt: 'Asmi',
-			},
-		],
+		images: '/favicon/apple-icon.png',
 		type: 'website',
 	},
 	twitter: {
