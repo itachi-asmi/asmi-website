@@ -1,9 +1,34 @@
 import { env } from '@/env.mjs';
 
 export const siteConfig = {
-	title: 'Asmi',
-	description: 'Asmi',
-	keywords: () => ['Asmi'],
+	title: 'Asmi - Your smartest personal assistant that knows you well and gets things done',
+	description:
+		"Asmi is a new kind of AI companion that listens, understands context, and quietly helps you organize your life. Designed for high performers, deep thinkers, and anyone who wants a calmer, more intentional day. Whether you're brainstorming ideas, offloading mental clutter, tracking wins, or just trying to remember what mattered most—Asmi is always there. Think of it as your intelligent personal assistant that turns spoken thoughts into structured clarity.",
+	keywords: () => [
+		'Asmi',
+		'voice assistant',
+		'AI assistant',
+		'productivity',
+		'smart to-do list',
+		'voice notes',
+		'personal assistant',
+		'reminder app',
+		'life organizer',
+		'thought journal',
+		'talk to-do',
+		'intelligent assistant,founder tools',
+		'executive assistant',
+		'mental clarity',
+		'think out loud',
+		'voice journaling',
+		'spoken task manager',
+		'mindfulness productivity',
+		'secure voice notes',
+		'encrypted assistant',
+		'iPhone productivity',
+		'always-on assistant',
+		'hands-free productivity',
+	],
 	url: () => env.APP_URL,
 	// googleSiteVerificationId: () => env.GOOGLE_SITE_VERIFICATION_ID || '',
 };

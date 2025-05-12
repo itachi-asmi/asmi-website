@@ -47,7 +47,6 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 			const response = await axios.get(
 				`${process.env.NEXT_PUBLIC_BASE_PATH}prospective/waitlist/count/`
 			);
-			console.log('Waitlist count:', response.data?.count);
 			return response.data?.count ?? null;
 		} catch (error) {
 			console.error('Failed to fetch waitlist count:', error);
