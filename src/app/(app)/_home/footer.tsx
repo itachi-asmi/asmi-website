@@ -161,7 +161,7 @@ const Footer = () => {
 						© {new Date().getFullYear()} Asmi AI. All rights
 						reserved.
 					</p>
-					<div className="flex space-x-6">
+{/* 					<div className="flex space-x-6">
 						<a
 							href="#"
 							className="hover:text-asmi-600 text-sm text-gray-500"
@@ -180,7 +180,7 @@ const Footer = () => {
 						>
 							Contact
 						</a>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</footer>
