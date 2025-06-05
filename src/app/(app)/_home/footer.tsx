@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
 	return (
@@ -75,6 +76,14 @@ const Footer = () => {
 										About
 									</a>
 								</li>
+								<li>
+									<Link
+										href="/privacy"
+										className="hover:text-asmi-600 text-gray-600 transition-colors"
+									>
+										Privacy
+									</Link>
+								</li>
 								{/* <li>
 									<a
 										href="#"
@@ -127,14 +136,6 @@ const Footer = () => {
 										href="#"
 										className="hover:text-asmi-600 text-gray-600 transition-colors"
 									>
-										Privacy
-									</a>
-								</li>
-								<li>
-									<a
-										href="#"
-										className="hover:text-asmi-600 text-gray-600 transition-colors"
-									>
 										Contact
 									</a>
 								</li>
@@ -146,10 +147,10 @@ const Footer = () => {
 							</h3>
 							<div className="flex space-x-4">
 								<a
-									href="mailto:rishi@asmiai.com"
+									href="mailto:support@asmiai.com"
 									className="hover:text-asmi-600 text-gray-600 transition-colors"
 								>
-									rishi@asmiai.com
+									support@asmiai.com
 								</a>
 							</div>
 						</div>
@@ -158,7 +159,7 @@ const Footer = () => {
 
 				<div className="mt-16 flex flex-col items-center justify-between border-t border-gray-200 pt-8 md:flex-row">
 					<p className="mb-4 text-sm text-gray-500 md:mb-0">
-						© {new Date().getFullYear()} Asmi AI. All rights
+						© {new Date().getFullYear()} Humint Labs, Inc.
 						reserved.
 					</p>
 				</div>
