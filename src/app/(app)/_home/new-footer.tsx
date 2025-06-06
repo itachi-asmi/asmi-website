@@ -16,22 +16,25 @@ export default function NewFooter() {
 						>
 							Privacy
 						</Link>
-						<a
+						{/* <a
 							href="#"
 							className="transition-colors duration-300 hover:text-[#5DFF9F]"
 						>
 							Terms
-						</a>
+						</a> */}
 						<a
-							href="#"
+							href="mailto:rishi@asmiai.com"
 							className="transition-colors duration-300 hover:text-[#5DFF9F]"
 						>
-							Contact
+							rishi@asmiai.com
 						</a>
 					</div>
 				</div>
 				<div className="mt-12 border-t border-[#5DFF9F]/10 pt-8 text-center text-gray-500">
-					<p>&copy; 2024 Asmi. Built for founders who move fast.</p>
+					<p>
+						© {new Date().getFullYear()} Humint Labs, Inc. Built
+						for founders who move fast.
+					</p>
 				</div>
 			</div>
 		</footer>
