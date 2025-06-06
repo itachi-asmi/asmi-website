@@ -1,15 +1,12 @@
 import Link from 'next/link';
 
-import Logo from '@/components/logo';
-
 export default function NewFooter() {
 	return (
 		<footer className="border-t border-[#5DFF9F]/10 bg-[#0D0D0D] px-6 py-16">
 			<div className="mx-auto max-w-7xl">
 				<div className="flex flex-col items-center justify-between gap-8 md:flex-row">
 					<div className="flex items-center gap-4">
-						<Logo className="hidden lg:block" />
-						<span className="font-medium text-white">
+						<span className="text-xl font-medium text-white">
 							Built for operators who move fast.
 						</span>
 					</div>

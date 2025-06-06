@@ -408,7 +408,7 @@ const Index = () => {
 						animate={howItWorksInView ? 'visible' : 'hidden'}
 					>
 						<motion.h2
-							className="gradient-text-white mb-6 text-5xl font-bold lg:text-6xl"
+							className="gradient-text-white mb-6 text-4xl font-bold lg:text-6xl"
 							variants={itemVariants}
 						>
 							How Asmi works
