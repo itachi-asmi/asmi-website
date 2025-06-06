@@ -310,10 +310,6 @@ const ToggleComparison = () => {
 													? 'text-white group-hover:text-[#5DFF9F]'
 													: 'text-gray-300 group-hover:text-white'
 											}`}
-											style={{
-												fontFamily:
-													"'General Sans', Inter, sans-serif",
-											}}
 										>
 											{item.text}
 										</span>

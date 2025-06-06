@@ -1,9 +1,10 @@
 import NewFooter from '../_home/new-footer';
 import BackButton from './_ui/back';
-import NameSlider from './_ui/name-slider';
 import WaitlistId from './_ui/wishlist-id';
 
 import Nav from '@/components/nav';
+import { Slider } from '@/components/slider';
+import { WaitlistNames } from '@/helpers/constant';
 
 export const revalidate = 60;
 
@@ -45,7 +46,13 @@ export default async function Waitlist() {
 						<div className="mb-4 flex flex-col items-center justify-center text-xl leading-9 md:flex-row md:gap-1 md:text-2xl ">
 							<span>You&apos;ll soon be part of the same </span>
 							<span className="relative -left-[32px] md:left-0">
-								tribe as {<NameSlider />}
+								tribe as{' '}
+								<span className="relative ml-2 inline-block align-baseline">
+									<Slider
+										data={WaitlistNames}
+										className="absolute inset-x-0 -top-[29px] text-center text-3xl font-semibold"
+									/>
+								</span>
 							</span>
 						</div>
 						<WaitlistId />

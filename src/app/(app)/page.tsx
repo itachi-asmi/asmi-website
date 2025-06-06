@@ -19,6 +19,7 @@ import NewFooter from './_home/new-footer';
 import ToggleComparison from './_home/toggle-comparision';
 
 import Nav from '@/components/nav';
+import { Slider } from '@/components/slider';
 import { Badge } from '@/ui/badge';
 import { Card, CardContent } from '@/ui/card';
 
@@ -228,7 +229,6 @@ const Index = () => {
 								backgroundClip: 'text',
 								letterSpacing: '-0.5px',
 								textShadow: '0 0 12px rgba(93, 255, 159, 0.15)',
-								fontFamily: "'General Sans', Inter, sans-serif",
 							}}
 							variants={itemVariants}
 						>
@@ -331,7 +331,6 @@ const Index = () => {
 								backgroundClip: 'text',
 								letterSpacing: '-0.5px',
 								textShadow: '0 0 12px rgba(93, 255, 159, 0.15)',
-								fontFamily: "'General Sans', Inter, sans-serif",
 							}}
 							variants={itemVariants}
 						>
@@ -577,7 +576,10 @@ const Index = () => {
 							variants={itemVariants}
 						>
 							Join the beta and get your AI Chief of Staff inside
-							WhatsApp.
+							<Slider
+								data={['WhatsApp.', 'iMessage.']}
+								className="ml-2 font-medium "
+							/>
 						</motion.p>
 						<HeroForm
 							className="mx-auto max-w-md space-y-6"

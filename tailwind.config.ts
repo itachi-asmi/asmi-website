@@ -147,6 +147,17 @@ const config = {
 						transform: 'translateY(-5px) rotate(-1deg)',
 					},
 				},
+				meteor: {
+					'0%': {
+						transform: 'rotate(215deg) translateX(0)',
+						opacity: '1',
+					},
+					'70%': { opacity: '1' },
+					'100%': {
+						transform: 'rotate(215deg) translateX(-500px)',
+						opacity: '0',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -157,6 +168,7 @@ const config = {
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'particle-float': 'particle-float 6s ease-in-out infinite',
 				float: 'float 3s ease-in-out infinite',
+				'meteor-effect': 'meteor 5s linear infinite',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

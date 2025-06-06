@@ -32,3 +32,23 @@ export const siteConfig = {
 	url: () => env.APP_URL,
 	// googleSiteVerificationId: () => env.GOOGLE_SITE_VERIFICATION_ID || '',
 };
+
+export const WaitlistNames = [
+	'Steve',
+	'Lalit',
+	'Nandan',
+	'Olivia',
+	'Riya',
+	'Mason',
+	'Anaya',
+	'Ethan',
+	'Ishaan',
+	'Grace',
+	'Rohan',
+	'Chloe',
+	'Meera',
+	'Carter',
+	'Diya',
+	'Logan',
+	'Neel',
+];
