@@ -12,14 +12,14 @@ import {
 	Target,
 	Users,
 } from 'lucide-react';
-import Link from 'next/link';
 
 import AnimatedHero from './_home/animated-hero';
 import HeroForm from './_home/hero-form';
+import NewFooter from './_home/new-footer';
 import ToggleComparison from './_home/toggle-comparision';
 
+import Nav from '@/components/nav';
 import { Badge } from '@/ui/badge';
-import { Button } from '@/ui/button';
 import { Card, CardContent } from '@/ui/card';
 
 const Index = () => {
@@ -73,24 +73,7 @@ const Index = () => {
 	return (
 		<div className="home min-h-screen bg-[#0B0B0B]">
 			{/* Navigation */}
-			<nav className="glass-card fixed top-0 z-50 w-full border-b border-[#5DFF9F]/10">
-				<div className="mx-auto max-w-7xl px-6 py-4">
-					<div className="flex items-center justify-between">
-						<motion.div
-							className="gradient-text-primary text-2xl font-bold"
-							whileHover={{ scale: 1.05 }}
-						>
-							Asmi
-						</motion.div>
-						<Button
-							variant="outline"
-							className="glass-card hover-glow border-[#5DFF9F]/20 text-[#5DFF9F] hover:bg-[#5DFF9F]/10"
-						>
-							Join Beta
-						</Button>
-					</div>
-				</div>
-			</nav>
+			<Nav />
 
 			{/* Hero Section */}
 			<AnimatedHero />
@@ -612,43 +595,7 @@ const Index = () => {
 					</motion.div>
 				</div>
 			</section>
-
-			{/* Footer */}
-			<footer className="border-t border-[#5DFF9F]/10 bg-[#0D0D0D] px-6 py-16">
-				<div className="mx-auto max-w-7xl">
-					<div className="flex flex-col items-center justify-between md:flex-row">
-						<div className="gradient-text-primary mb-4 text-2xl font-bold md:mb-0">
-							Asmi
-						</div>
-						<div className="flex space-x-8 text-gray-400">
-							<Link
-								href="/privacy"
-								rel="noopener noreferrer"
-								className="transition-colors duration-300 hover:text-[#5DFF9F]"
-							>
-								Privacy
-							</Link>
-							<a
-								href="#"
-								className="transition-colors duration-300 hover:text-[#5DFF9F]"
-							>
-								Terms
-							</a>
-							<a
-								href="#"
-								className="transition-colors duration-300 hover:text-[#5DFF9F]"
-							>
-								Contact
-							</a>
-						</div>
-					</div>
-					<div className="mt-12 border-t border-[#5DFF9F]/10 pt-8 text-center text-gray-500">
-						<p>
-							&copy; 2024 Asmi. Built for founders who move fast.
-						</p>
-					</div>
-				</div>
-			</footer>
+			<NewFooter />
 		</div>
 	);
 };

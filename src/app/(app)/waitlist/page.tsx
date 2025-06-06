@@ -1,8 +1,9 @@
+import NewFooter from '../_home/new-footer';
 import BackButton from './_ui/back';
-import Footer from './_ui/footer';
-import Header from './_ui/header';
 import NameSlider from './_ui/name-slider';
 import WaitlistId from './_ui/wishlist-id';
+
+import Nav from '@/components/nav';
 
 export const revalidate = 60;
 
@@ -32,13 +33,12 @@ export const revalidate = 60;
 
 export default async function Waitlist() {
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-white to-purple-50">
-			<Header />
-
+		<div className="min-h-screen bg-[#0B0B0B]">
+			<Nav showButton={false} />
 			<main className="p-4">
 				<div className="container mx-auto max-w-6xl">
 					<BackButton />
-					<div className="from-asmi-800 to-asmi-600 mb-16 rounded-2xl bg-gradient-to-r p-8 text-center text-white shadow-lg md:p-12">
+					<div className="glass-card mb-16 rounded-2xl bg-gradient-to-r p-8 text-center text-white shadow-lg md:p-12">
 						<h2 className="animate-fade-in mb-6 text-3xl font-bold md:text-4xl">
 							Welcome, Superstar.
 						</h2>
@@ -73,8 +73,7 @@ export default async function Waitlist() {
 					</div> */}
 				</div>
 			</main>
-
-			<Footer />
+			<NewFooter />
 		</div>
 	);
 }

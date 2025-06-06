@@ -47,7 +47,7 @@
 		@apply border-border;
 	}
 
-	body .home {
+	body {
 		@apply bg-[#0B0B0B] text-foreground;
 		background-image: radial-gradient(
 				circle at 20% 80%,
@@ -165,6 +165,7 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	min-width: max-content;
 }
 
 .gradient-text-white {
