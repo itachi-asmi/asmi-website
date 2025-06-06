@@ -11,7 +11,7 @@ export default function BackButton() {
 		<div className="mb-8">
 			<Button
 				variant="ghost"
-				className="hover:text-asmi-600 flex items-center text-gray-600"
+				className="flex items-center text-gray-600 hover:bg-white"
 				onClick={() => router.back()}
 			>
 				<ArrowLeft className="mr-2" size={16} />
