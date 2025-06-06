@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { CheckCircle, XCircle } from 'lucide-react';
@@ -8,6 +8,16 @@ const ToggleComparison = () => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, margin: '-100px' });
 	const [showWithAsmi, setShowWithAsmi] = useState(false);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			if (isInView) {
+				setShowWithAsmi((prev) => !prev);
+			}
+		}, 3000);
+
+		return () => clearInterval(interval);
+	}, [isInView]);
 
 	const containerVariants = {
 		hidden: { opacity: 0 },
@@ -182,7 +192,7 @@ const ToggleComparison = () => {
 					animate={isInView ? 'visible' : 'hidden'}
 				>
 					<motion.h2
-						className="mb-10 text-4xl font-semibold lg:text-5xl"
+						className="mb-10 text-4xl font-semibold lg:text-5xl lg:leading-tight"
 						style={{
 							background:
 								'linear-gradient(90deg, #A07CFE 0%, #5DFF9F 100%)',

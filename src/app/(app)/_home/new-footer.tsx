@@ -10,26 +10,40 @@ export default function NewFooter() {
 							Built for operators who move fast.
 						</span>
 					</div>
-					<div className="flex space-x-8 text-gray-400">
-						<Link
-							href="/privacy"
-							rel="noopener noreferrer"
-							className="transition-colors duration-300 hover:text-[#5DFF9F]"
-						>
-							Privacy
-						</Link>
-						{/* <a
-							href="#"
-							className="transition-colors duration-300 hover:text-[#5DFF9F]"
-						>
-							Terms
-						</a> */}
-						<a
-							href="mailto:rishi@asmiai.com"
-							className="transition-colors duration-300 hover:text-[#5DFF9F]"
-						>
-							Contact - rishi@asmiai.com
-						</a>
+					<div
+						className="grid grid-cols-2 gap-8 md:ml-auto lg:place-items-end
+"
+					>
+						<div className="col-span-1">
+							<h3 className="mb-4 font-semibold text-white">
+								Company
+							</h3>
+							<ul className="space-y-3">
+								<li>
+									<Link
+										href="/privacy"
+										className="text-gray-400"
+									>
+										Privacy
+									</Link>
+								</li>
+							</ul>
+						</div>
+						<div className="col-span-1">
+							<h3 className="mb-4 font-semibold text-white">
+								Contact
+							</h3>
+							<ul className="space-y-3">
+								<li>
+									<a
+										href="mailto:rishi@asmiai.com"
+										className="text-gray-400"
+									>
+										rishi@asmiai.com
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div className="mt-12 border-t border-[#5DFF9F]/10 pt-8 text-center text-gray-500">

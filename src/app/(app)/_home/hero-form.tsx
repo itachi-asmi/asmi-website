@@ -6,7 +6,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { toast } from 'sonner';
 import { z } from 'zod';
 
 import { useUiStore } from '../../../store/use-ui';
@@ -104,7 +103,7 @@ export default function HeroForm({
 			if (response.status === 201) {
 				router.push('/waitlist');
 				setWaitlistId(response.data?.id);
-				toast.success(response?.data?.detail);
+				// toast.success(response?.data?.detail);
 				form.reset();
 			}
 		} catch (error) {

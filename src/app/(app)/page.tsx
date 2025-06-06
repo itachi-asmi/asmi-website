@@ -128,7 +128,7 @@ const Index = () => {
 								icon: Brain,
 								title: 'Infinite Memory, Instant Recall',
 								description:
-									'Voice notes, conversations, decisions — Asmi never forgets context or commitments.',
+									'Voice notes, conversations, decisions — Asmi never forgets context and reminds on time.',
 								color: 'A07CFE',
 							},
 							{
@@ -149,14 +149,14 @@ const Index = () => {
 								icon: Phone,
 								title: 'Contact-Aware',
 								description:
-									'Uses contact names from your phone — no need to explain who people are.',
+									'Uses contact details from Google contacts — no need to explain who people are.',
 								color: 'A07CFE',
 							},
 							{
 								icon: Target,
 								title: 'Follow-ups Handled For You',
 								description:
-									'Automatically follows up on commitments via WhatsApp — no more chasing people.',
+									'Automatically follows up on commitments via iMessage — no more chasing people.',
 								color: '5DFF9F',
 							},
 							{
@@ -210,7 +210,7 @@ const Index = () => {
 					>
 						{/* Gradient divider line */}
 						<motion.div
-							className="w-15 mx-auto mb-3 h-0.5"
+							className="mx-auto mb-3 h-0.5 w-20"
 							style={{
 								background:
 									'linear-gradient(90deg, #A07CFE, #5DFF9F)',
@@ -220,19 +220,13 @@ const Index = () => {
 						/>
 
 						<motion.h2
-							className="mb-6 text-4xl font-semibold lg:text-5xl"
-							style={{
-								background:
-									'linear-gradient(90deg, #A07CFE 0%, #5DFF9F 100%)',
-								WebkitBackgroundClip: 'text',
-								WebkitTextFillColor: 'transparent',
-								backgroundClip: 'text',
-								letterSpacing: '-0.5px',
-								textShadow: '0 0 12px rgba(93, 255, 159, 0.15)',
-							}}
+							className="mb-6 text-4xl font-semibold text-white lg:text-5xl lg:leading-tight"
 							variants={itemVariants}
 						>
-							Built for high-velocity operators
+							Built for{' '}
+							<span className="gradient-text-primary">
+								high-velocity operators
+							</span>
 						</motion.h2>
 					</motion.div>
 
@@ -266,7 +260,7 @@ const Index = () => {
 							{
 								emoji: '💸',
 								title: 'VCs & Angels',
-								quote: "I don't prep decks for calls anymore. Asmi gives me the founder's context, last chat, and deal notes in WhatsApp — right before we speak.",
+								quote: "I don't prep decks for calls anymore. Asmi gives me the founder's context, last chat, and deal notes in iMessage — right before we speak.",
 								features: [
 									'Track every founder interaction',
 									'Remember deal terms and updates',
@@ -312,7 +306,7 @@ const Index = () => {
 					>
 						{/* Gradient divider line */}
 						<motion.div
-							className="w-15 mx-auto mb-3 h-0.5"
+							className="mx-auto mb-3 h-0.5 w-20"
 							style={{
 								background:
 									'linear-gradient(90deg, #A07CFE, #5DFF9F)',
@@ -322,7 +316,7 @@ const Index = () => {
 						/>
 
 						<motion.h2
-							className="mb-6 text-4xl font-semibold lg:text-5xl"
+							className="mb-6 text-4xl font-semibold lg:text-5xl lg:leading-tight"
 							style={{
 								background:
 									'linear-gradient(90deg, #A07CFE 0%, #5DFF9F 100%)',
@@ -432,7 +426,7 @@ const Index = () => {
 								number: '1',
 								title: 'Say it',
 								description:
-									'Voice note or text Asmi inside WhatsApp — no commands, just talk naturally.',
+									'Voice note or text Asmi inside iMessage/WhatsApp — no commands, just talk naturally.',
 								examples: [
 									'"Remind me to follow up with Tony on pricing."',
 									'"Schedule intro call with Alex next Tuesday at 3PM."',
@@ -456,7 +450,7 @@ const Index = () => {
 								examples: [
 									'• Prepares talking points before your next call',
 									'• Follows up with your team or investors',
-									'• Sends gentle nudges automatically in WhatsApp',
+									'• Sends gentle nudges automatically',
 								],
 							},
 						].map((step, index) => (
