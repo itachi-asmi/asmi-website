@@ -250,7 +250,7 @@ const ToggleComparison = () => {
 
 				{/* Content Card */}
 				<motion.div
-					className="relative mx-auto max-w-[900px] rounded-2xl border p-8"
+					className="relative mx-auto max-w-[900px] rounded-2xl border p-2 lg:p-8"
 					style={{
 						background: 'rgba(255, 255, 255, 0.02)',
 						backdropFilter: 'blur(20px)',
@@ -276,7 +276,7 @@ const ToggleComparison = () => {
 							initial="hidden"
 							animate="visible"
 							exit="exit"
-							className="relative z-10 space-y-6"
+							className="relative z-10 space-y-0 lg:space-y-6"
 						>
 							{currentData.map((item, index) => (
 								<motion.div
