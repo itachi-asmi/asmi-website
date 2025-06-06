@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function PrivacyPolicy() {
 	return (
-		<main className="mx-auto max-w-6xl px-6 pb-12 text-gray-800">
+		<main className="mx-auto max-w-6xl bg-white px-6 pb-12 text-gray-800">
 			<div className="flex items-center py-6">
 				{/* <h1 className="text-asmi-600 text-2xl font-bold">Asmi</h1> */}
 				<img

@@ -4,12 +4,11 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
-import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { z } from 'zod';
 
-import { cn } from '../../../helpers/utils';
 import { useUiStore } from '../../../store/use-ui';
 import { Button } from '../../../ui/button';
 import {
@@ -21,11 +20,32 @@ import {
 } from '../../../ui/form';
 import { Input } from '../../../ui/input';
 
+import { cn } from '@/helpers/utils';
+
 const schema = z.object({
 	email: z.string().email({ message: 'Invalid email address' }),
 });
 
-export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
+const itemVariants = {
+	hidden: { opacity: 0, y: 30 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.8, ease: 'easeOut' },
+	},
+};
+
+export default function HeroForm({
+	className,
+	btnClasses,
+	inputClasses,
+	containerClasses,
+}: {
+	className?: string;
+	btnClasses?: string;
+	inputClasses?: string;
+	containerClasses?: string;
+}) {
 	const form = useForm({
 		resolver: zodResolver(schema),
 		defaultValues: {
@@ -95,12 +115,13 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 	};
 
 	return (
-		<div className="relative z-10">
-			<Form {...form}>
-				<form
-					onSubmit={form.handleSubmit(onSubmit)}
-					className="flex flex-col gap-4 sm:flex-row"
-				>
+		<Form {...form}>
+			<motion.form
+				onSubmit={form.handleSubmit(onSubmit)}
+				className={cn('max-w-md space-y-4', className)}
+				variants={itemVariants}
+			>
+				<div className={cn('flex gap-3', containerClasses)}>
 					<FormField
 						control={form.control}
 						name="email"
@@ -111,27 +132,30 @@ export default function HeroForm({ btnClasses }: { btnClasses?: string }) {
 										placeholder="Enter Email Address"
 										type="text"
 										id="email"
-										className="md:w-[240px] lg:w-[340px]"
+										className={cn(
+											'md:w-[240px] lg:w-[340px]',
+											inputClasses
+										)}
 										onFocus={handleInputFocus}
 										{...field}
 									/>
 								</FormControl>
-								<FormMessage className="!mt-1 text-left" />
+								<FormMessage className="text-destructive !mt-1 text-left" />
 							</FormItem>
 						)}
 					/>
 					<Button
+						type="submit"
 						disabled={isSubmitting}
 						className={cn(
-							'bg-asmi-600 hover:bg-asmi-700 z-10 flex items-center gap-2 rounded-lg px-4 py-6 text-lg text-white',
+							'hover-glow bg-white px-8 font-medium text-black transition-all duration-300 hover:bg-[#5DFF9F] hover:text-black',
 							btnClasses
 						)}
 					>
-						<span>Join the Waitlist</span>
-						<ArrowRight className="ml-1 size-5" />
+						Join Beta
 					</Button>
-				</form>
-			</Form>
-		</div>
+				</div>
+			</motion.form>
+		</Form>
 	);
 }
