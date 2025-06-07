@@ -1,9 +1,17 @@
+import withBundleAnalyzer from '@next/bundle-analyzer';
 import type { NextConfig } from 'next';
+
+const withAnalyzer = withBundleAnalyzer({
+	enabled: process.env.ANALYZE === 'true',
+});
 
 const nextConfig: NextConfig = {
 	images: {
-		domains: [],
+		domains: [
+			// 'pemilyy-assets.s3.ap-south-1.amazonaws.com',
+		],
 	},
+	reactStrictMode: false,
 };
 
-export default nextConfig;
+export default withAnalyzer(nextConfig);

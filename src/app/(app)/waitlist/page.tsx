@@ -1,4 +1,4 @@
-import NewFooter from '../_home/new-footer';
+import NewFooter from '../../../components/footer';
 import BackButton from './_ui/back';
 import WaitlistId from './_ui/wishlist-id';
 

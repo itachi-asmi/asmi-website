@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-lines-per-function */
 
-import NewFooter from '../_home/new-footer';
+import NewFooter from '../../../components/footer';
 
 import Nav from '@/components/nav';
 
