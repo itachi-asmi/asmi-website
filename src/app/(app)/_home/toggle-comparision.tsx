@@ -8,17 +8,25 @@ import { CheckCircle, XCircle } from 'lucide-react';
 
 const ToggleComparison = () => {
 	const ref = useRef(null);
+	const [hasToggled, setToggled] = useState(false);
 	const isInView = useInView(ref, { once: true, margin: '-100px' });
 	const [showWithAsmi, setShowWithAsmi] = useState(false);
 
 	useEffect(() => {
-		const interval = setTimeout(() => {
-			if (isInView) {
-				setShowWithAsmi((prev) => !prev);
-			}
-		}, 3000);
-		return () => clearInterval(interval);
-	}, [isInView]);
+		//TODO: have to clear timer to avoid memory leak
+		// for some reason, the timer is not being cleared
+		if (isInView && !hasToggled) {
+			setToggled(true);
+			setTimeout(() => {
+				setShowWithAsmi(true);
+			}, 3000);
+		}
+
+		// return () => {
+		// 	console.log('🧹 Cleanup, timer cleared');
+		// 	clearTimeout(timer);
+		// };
+	}, [isInView, hasToggled]);
 
 	const containerVariants = {
 		hidden: { opacity: 0 },
@@ -63,8 +71,8 @@ const ToggleComparison = () => {
 
 	const listItemVariants = {
 		hidden: {
-			opacity: 0,
-			y: 10,
+			opacity: 1,
+			y: 0,
 		},
 		visible: {
 			opacity: 1,
@@ -119,6 +127,13 @@ const ToggleComparison = () => {
 	const currentData = showWithAsmi
 		? comparisonData.map((item) => item.with)
 		: comparisonData.map((item) => item.without);
+
+	const handleToggle = () => {
+		setShowWithAsmi((prev) => !prev);
+		if (!hasToggled) {
+			setToggled(true);
+		}
+	};
 
 	return (
 		<section ref={ref} className="relative px-6 py-20">
@@ -221,7 +236,7 @@ const ToggleComparison = () => {
 							</span>
 
 							<motion.button
-								onClick={() => setShowWithAsmi(!showWithAsmi)}
+								onClick={handleToggle}
 								className={`relative h-8 w-16 rounded-full transition-all duration-300 focus:outline-none ${
 									showWithAsmi
 										? 'bg-[#5DFF9F]/20 shadow-[0_0_20px_rgba(93,255,159,0.3)]'
