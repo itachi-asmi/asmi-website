@@ -1,9 +1,15 @@
-import { motion } from 'framer-motion';
+'use client';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 import { defaultContainerVariants, defaultItemVariants } from '@/helpers/utils';
 import { Card, CardContent } from '@/ui/card';
 
-export default function PersonasSection({ inView }: { inView: boolean }) {
+export default function PersonasSection() {
+	const ref = useRef(null);
+	const inView = useInView(ref, { once: true, margin: '-100px' });
+
 	return (
 		<div className="relative px-6 py-20">
 			<div className="absolute inset-0 bg-gradient-to-r from-[#A07CFE]/5 via-transparent to-[#5DFF9F]/5"></div>

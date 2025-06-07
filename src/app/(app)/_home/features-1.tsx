@@ -1,4 +1,7 @@
-import { motion } from 'framer-motion';
+'use client';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import {
 	Brain,
 	Calendar,
@@ -11,9 +14,12 @@ import {
 import { defaultContainerVariants, defaultItemVariants } from '@/helpers/utils';
 import { Card, CardContent } from '@/ui/card';
 
-export default function FeaturesSection({ inView }: { inView: boolean }) {
+export default function FeaturesSection() {
+	const ref = useRef(null);
+	const inView = useInView(ref, { once: true, margin: '-100px' });
+
 	return (
-		<div className="relative px-6 py-32">
+		<section ref={ref} className="relative px-6 py-32">
 			<div className="relative z-10 mx-auto max-w-7xl">
 				<motion.div
 					className="mb-20 text-center"
@@ -118,6 +124,6 @@ export default function FeaturesSection({ inView }: { inView: boolean }) {
 					))}
 				</motion.div>
 			</div>
-		</div>
+		</section>
 	);
 }

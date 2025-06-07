@@ -1,19 +1,17 @@
-import { motion } from 'framer-motion';
+'use client';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Brain, MessageSquare, Target } from 'lucide-react';
 
 import { defaultContainerVariants, defaultItemVariants } from '@/helpers/utils';
 
-export default function HowItWorksSection({ inView }: { inView: boolean }) {
+export default function HowItWorksSection() {
+	const ref = useRef(null);
+	const inView = useInView(ref, { once: true, margin: '-100px' });
+
 	return (
 		<div className="relative px-6 py-32">
-			{/* <div className="absolute inset-0">
-					<div className="bg-[#A07CFE]/3 animate-particle-float absolute right-1/4 top-1/4 size-96 rounded-full blur-3xl"></div>
-					<div
-						className="bg-[#5DFF9F]/3 animate-particle-float absolute bottom-1/4 left-1/4 size-96 rounded-full blur-3xl"
-						style={{ animationDelay: '2s' }}
-					></div>
-				</div> */}
-
 			<div className="relative z-10 mx-auto max-w-7xl">
 				<motion.div
 					className="mb-20 text-center"

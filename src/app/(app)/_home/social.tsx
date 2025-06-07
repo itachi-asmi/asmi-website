@@ -1,9 +1,15 @@
-import { motion } from 'framer-motion';
+'use client';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 import { defaultContainerVariants, defaultItemVariants } from '@/helpers/utils';
 import { Card, CardContent } from '@/ui/card';
 
-export default function SocialSection({ inView }: { inView: boolean }) {
+export default function SocialSection() {
+	const ref = useRef(null);
+	const inView = useInView(ref, { once: true, margin: '-100px' });
+
 	return (
 		<div className="px-6 py-20">
 			<div className="mx-auto max-w-7xl">

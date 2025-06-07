@@ -1,11 +1,17 @@
 /* eslint-disable max-lines-per-function */
+'use client';
+
 import { motion } from 'framer-motion';
 import { Calendar, MessageSquare, Target } from 'lucide-react';
+import dynamic from 'next/dynamic';
 
-import HeroForm from './hero-form';
-
-import { Slider } from '@/components/slider';
 import { Badge } from '@/ui/badge';
+
+const Slider = dynamic(() =>
+	import('@/components/slider').then((mod) => mod.Slider)
+);
+
+const HeroForm = dynamic(() => import('./hero-form'));
 
 const AnimatedHero = () => {
 	const containerVariants = {

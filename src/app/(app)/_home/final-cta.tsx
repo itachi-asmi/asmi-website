@@ -1,12 +1,22 @@
-import { motion } from 'framer-motion';
+'use client';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Badge } from 'lucide-react';
+import dynamic from 'next/dynamic';
 
-import HeroForm from './hero-form';
-
-import { Slider } from '@/components/slider';
 import { defaultContainerVariants, defaultItemVariants } from '@/helpers/utils';
 
-export default function CtaSection({ inView }: { inView: boolean }) {
+const Slider = dynamic(() =>
+	import('@/components/slider').then((mod) => mod.Slider)
+);
+
+const HeroForm = dynamic(() => import('./hero-form'));
+
+export default function CtaSection() {
+	const ref = useRef(null);
+	const inView = useInView(ref, { once: true, margin: '-100px' });
+
 	return (
 		<div className="relative px-6 py-32">
 			<div className="absolute inset-0 bg-gradient-to-r from-[#A07CFE]/10 to-[#5DFF9F]/10"></div>
