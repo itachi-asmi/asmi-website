@@ -566,14 +566,19 @@ const Index = () => {
 						</motion.h2>
 
 						<motion.p
-							className="mb-12 text-xl leading-relaxed text-gray-300"
+							className="relative mb-12 text-xl leading-relaxed text-gray-300"
 							variants={itemVariants}
 						>
-							Join the beta and get your AI Chief of Staff inside
-							<Slider
-								data={['WhatsApp.', 'iMessage.']}
-								className="ml-2 font-medium "
-							/>
+							<span>
+								Join the beta and get your AI Chief of Staff
+								inside
+								<span className="relative inline-block w-[8ch] align-baseline">
+									<Slider
+										data={['WhatsApp.', 'iMessage.']}
+										className="absolute left-[5px] top-[-22px] font-medium"
+									/>
+								</span>
+							</span>
 						</motion.p>
 						<HeroForm
 							className="mx-auto max-w-md space-y-6"
@@ -581,13 +586,13 @@ const Index = () => {
 							inputClasses="glass-card h-14 w-full border-[#5DFF9F]/20 text-lg text-white placeholder:text-gray-400 !w-full"
 							btnClasses="hover-glow h-14 w-full bg-white text-lg font-semibold text-black transition-all duration-300 hover:bg-[#5DFF9F] hover:text-black"
 						/>
-						<motion.p
+						{/* <motion.p
 							className="mt-6 text-sm text-gray-400"
 							variants={itemVariants}
 						>
 							No credit card required. Early access closes
 							December 15th.
-						</motion.p>
+						</motion.p> */}
 					</motion.div>
 				</div>
 			</section>

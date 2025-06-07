@@ -16,7 +16,7 @@ export default function NewFooter() {
 					>
 						<div className="col-span-1">
 							<h3 className="mb-4 font-semibold text-white">
-								Company
+								Policy
 							</h3>
 							<ul className="space-y-3">
 								<li>
@@ -24,7 +24,7 @@ export default function NewFooter() {
 										href="/privacy"
 										className="text-gray-400"
 									>
-										Privacy
+										Privacy Policy
 									</Link>
 								</li>
 							</ul>
