@@ -233,6 +233,7 @@ const ToggleComparison = () => {
 										: '1px solid rgba(255, 92, 92, 0.3)',
 								}}
 								whileTap={{ scale: 0.95 }}
+								aria-label="toggle comparison"
 							>
 								<motion.div
 									className={`absolute top-1 size-6 rounded-full transition-all duration-300 ${

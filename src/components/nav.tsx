@@ -12,6 +12,7 @@ export default function Nav({ showButton = false }) {
 						<Button
 							variant="outline"
 							className="glass-card hover-glow border-[#5DFF9F]/20 text-[#5DFF9F] hover:bg-[#5DFF9F]/10"
+							aria-label="Join Beta"
 						>
 							Join Beta
 						</Button>

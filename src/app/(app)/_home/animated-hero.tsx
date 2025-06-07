@@ -6,9 +6,14 @@ import { Calendar, MessageSquare, Target } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
 import { Badge } from '@/ui/badge';
+import { Loader } from '@/ui/loader';
 
-const Slider = dynamic(() =>
-	import('@/components/slider').then((mod) => mod.Slider)
+const Slider = dynamic(
+	() => import('@/components/slider').then((mod) => mod.Slider),
+	{
+		ssr: false,
+		loading: () => <Loader />,
+	}
 );
 
 const HeroForm = dynamic(() => import('./hero-form'));

@@ -150,6 +150,7 @@ export default function HeroForm({
 							'hover-glow bg-white px-8 font-medium text-black transition-all duration-300 hover:bg-[#5DFF9F] hover:text-black',
 							btnClasses
 						)}
+						aria-label="join beta"
 					>
 						Join Beta
 					</Button>

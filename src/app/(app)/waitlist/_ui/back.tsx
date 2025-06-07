@@ -13,6 +13,7 @@ export default function BackButton() {
 				variant="ghost"
 				className="flex items-center text-gray-600 hover:bg-white"
 				onClick={() => router.back()}
+				aria-label="back"
 			>
 				<ArrowLeft className="mr-2" size={16} />
 				Back to home

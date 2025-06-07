@@ -6,12 +6,20 @@ import { Badge } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
 import { defaultContainerVariants, defaultItemVariants } from '@/helpers/utils';
+import { Loader } from '@/ui/loader';
 
-const Slider = dynamic(() =>
-	import('@/components/slider').then((mod) => mod.Slider)
+const Slider = dynamic(
+	() => import('@/components/slider').then((mod) => mod.Slider),
+	{
+		ssr: false,
+		loading: () => <Loader />,
+	}
 );
 
-const HeroForm = dynamic(() => import('./hero-form'));
+const HeroForm = dynamic(() => import('./hero-form'), {
+	ssr: false,
+	loading: () => <Loader />,
+});
 
 export default function CtaSection() {
 	const ref = useRef(null);
@@ -43,7 +51,7 @@ export default function CtaSection() {
 						</span>
 					</motion.h2>
 
-					<motion.p
+					<motion.div
 						className="relative mb-12 text-xl leading-relaxed text-gray-300"
 						variants={defaultItemVariants}
 					>
@@ -56,7 +64,7 @@ export default function CtaSection() {
 								/>
 							</span>
 						</span>
-					</motion.p>
+					</motion.div>
 					<HeroForm
 						className="mx-auto max-w-md space-y-6"
 						containerClasses="flex-col"
