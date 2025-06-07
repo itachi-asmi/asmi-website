@@ -10,12 +10,11 @@ const ToggleComparison = () => {
 	const [showWithAsmi, setShowWithAsmi] = useState(false);
 
 	useEffect(() => {
-		const interval = setInterval(() => {
+		const interval = setTimeout(() => {
 			if (isInView) {
 				setShowWithAsmi((prev) => !prev);
 			}
 		}, 3000);
-
 		return () => clearInterval(interval);
 	}, [isInView]);
 
