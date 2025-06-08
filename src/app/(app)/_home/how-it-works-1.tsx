@@ -11,7 +11,7 @@ export default function HowItWorksSection() {
 	const inView = useInView(ref, { once: true, margin: '-100px' });
 
 	return (
-		<div className="relative px-6 py-32">
+		<section ref={ref} className="relative px-6 py-32">
 			<div className="relative z-10 mx-auto max-w-7xl">
 				<motion.div
 					className="mb-20 text-center"
@@ -151,6 +151,6 @@ export default function HowItWorksSection() {
 					</div>
 				</motion.div>
 			</div>
-		</div>
+		</section>
 	);
 }

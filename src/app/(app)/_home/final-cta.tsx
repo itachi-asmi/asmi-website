@@ -2,10 +2,10 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Badge } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
 import { defaultContainerVariants, defaultItemVariants } from '@/helpers/utils';
+import { Badge } from '@/ui/badge';
 import { Loader } from '@/ui/loader';
 
 const Slider = dynamic(
@@ -26,7 +26,7 @@ export default function CtaSection() {
 	const inView = useInView(ref, { once: true, margin: '-100px' });
 
 	return (
-		<div className="relative px-6 py-32">
+		<section ref={ref} className="relative px-6 py-32">
 			<div className="absolute inset-0 bg-gradient-to-r from-[#A07CFE]/10 to-[#5DFF9F]/10"></div>
 			<div className="relative z-10 mx-auto max-w-4xl text-center">
 				<motion.div
@@ -80,6 +80,6 @@ export default function CtaSection() {
 						</motion.p> */}
 				</motion.div>
 			</div>
-		</div>
+		</section>
 	);
 }

@@ -11,7 +11,7 @@ export default function PersonasSection() {
 	const inView = useInView(ref, { once: true, margin: '-100px' });
 
 	return (
-		<div className="relative px-6 py-20">
+		<section ref={ref} className="relative px-6 py-20">
 			<div className="absolute inset-0 bg-gradient-to-r from-[#A07CFE]/5 via-transparent to-[#5DFF9F]/5"></div>
 			<div className="relative z-10 mx-auto max-w-7xl">
 				<motion.div
@@ -103,6 +103,6 @@ export default function PersonasSection() {
 					))}
 				</motion.div>
 			</div>
-		</div>
+		</section>
 	);
 }

@@ -11,7 +11,7 @@ export default function SocialSection() {
 	const inView = useInView(ref, { once: true, margin: '-100px' });
 
 	return (
-		<div className="px-6 py-20">
+		<section ref={ref} className="px-6 py-20">
 			<div className="mx-auto max-w-7xl">
 				<motion.div
 					className="mb-16 text-center"
@@ -97,6 +97,6 @@ export default function SocialSection() {
 					</motion.div>
 				</motion.div>
 			</div>
-		</div>
+		</section>
 	);
 }

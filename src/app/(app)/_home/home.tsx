@@ -16,7 +16,7 @@ const Index = () => {
 	return (
 		<div className="home min-h-screen bg-[#0B0B0B]">
 			<Nav />
-			<main className="relative mx-auto max-w-7xl">
+			<main className="relative mx-auto">
 				<AnimatedHero />
 				<ToggleComparison />
 				<FeaturesSection />
