@@ -60,7 +60,7 @@ export default function CtaSection() {
 							<span className="relative inline-block w-[8ch] align-baseline">
 								<Slider
 									data={['WhatsApp.', 'iMessage.']}
-									className="absolute left-[5px] top-[-22px] font-medium"
+									className="ml-2 font-medium"
 								/>
 							</span>
 						</span>
