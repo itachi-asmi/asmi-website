@@ -256,11 +256,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
 	background: rgba(93, 255, 159, 0.5);
 }
-
-@layer utilities {
-	@supports (-webkit-hyphens: none) and (not (-ms-hyphens: none)) {
-		.safari\\:top-\\[-18px\\] {
-			top: -18px !important;
-		}
-	}
-}

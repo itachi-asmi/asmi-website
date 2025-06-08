@@ -34,9 +34,6 @@ export const siteConfig = {
 };
 
 export const WaitlistNames = [
-	'Steve',
-	'Lalit',
-	'Nandan',
 	'Olivia',
 	'Riya',
 	'Mason',
@@ -51,4 +48,7 @@ export const WaitlistNames = [
 	'Diya',
 	'Logan',
 	'Neel',
+	'Steve',
+	'Lalit',
+	'Nandan',
 ];

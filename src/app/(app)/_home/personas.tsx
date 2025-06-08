@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 
 import { useRef } from 'react';
@@ -89,8 +90,7 @@ export default function PersonasSection() {
 										{persona.title}
 									</h3>
 									<p className="mb-4 italic text-slate-300">
-										&lt;span&gt;&quot;{persona.quote}
-										&quot;&lt;/span&gt;
+										<span>"{persona.quote}"</span>
 									</p>
 									<ul className="space-y-2 text-sm text-slate-300">
 										{persona.features.map((feature, i) => (
