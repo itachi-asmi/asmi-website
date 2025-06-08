@@ -22,6 +22,7 @@ const Header = () => {
 				<button
 					className="rounded-md p-2 hover:bg-gray-100 md:hidden"
 					onClick={() => setIsMenuOpen(!isMenuOpen)}
+					aria-label="menu"
 				>
 					<Menu size={24} />
 				</button>
