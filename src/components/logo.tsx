@@ -19,7 +19,7 @@ export default function Logo({ className }: { className?: string }) {
 				<Image
 					src="/images/logo.png"
 					alt="Asmi Logo"
-					width={120}
+					width={92}
 					height={32}
 					priority={true}
 				/>

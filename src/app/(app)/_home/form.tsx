@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
-import { motion } from 'framer-motion';
+import { Send } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { z } from 'zod';
 
@@ -25,25 +25,10 @@ const schema = z.object({
 	email: z.string().email({ message: 'Invalid email address' }),
 });
 
-const itemVariants = {
-	hidden: { opacity: 0, y: 30 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: { duration: 0.8, ease: 'easeOut' },
-	},
-};
-
 export default function HeroForm({
-	className,
-	btnClasses,
-	inputClasses,
-	containerClasses,
+	btnChange = false,
 }: {
-	className?: string;
-	btnClasses?: string;
-	inputClasses?: string;
-	containerClasses?: string;
+	btnChange?: boolean;
 }) {
 	const form = useForm({
 		resolver: zodResolver(schema),
@@ -115,12 +100,11 @@ export default function HeroForm({
 
 	return (
 		<Form {...form}>
-			<motion.form
+			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className={cn('max-w-md space-y-4', className)}
-				variants={itemVariants}
+				className={cn('max-w-md space-y-4')}
 			>
-				<div className={cn('flex gap-3', containerClasses)}>
+				<div className={cn('flex gap-3')}>
 					<FormField
 						control={form.control}
 						name="email"
@@ -132,14 +116,13 @@ export default function HeroForm({
 										type="text"
 										id="email"
 										className={cn(
-											'md:w-[240px] lg:w-[340px]',
-											inputClasses
+											'flex-1 border-white/10 bg-white/[0.03] text-white placeholder:text-gray-400'
 										)}
 										onFocus={handleInputFocus}
 										{...field}
 									/>
 								</FormControl>
-								<FormMessage className="text-destructive !mt-1 text-left" />
+								<FormMessage className="!text-destructive !mt-1 text-left" />
 							</FormItem>
 						)}
 					/>
@@ -147,15 +130,18 @@ export default function HeroForm({
 						type="submit"
 						disabled={isSubmitting}
 						className={cn(
-							'hover-glow bg-white px-8 font-medium text-black transition-all duration-300 hover:bg-[#5DFF9F] hover:text-black',
-							btnClasses
+							'bg-[#5DFF9F] px-6 font-medium text-black hover:bg-[#5DFF9F]/90'
 						)}
 						aria-label="join beta"
 					>
-						Join Beta
+						{btnChange ? (
+							<Send className="size-4" />
+						) : (
+							'Secure my spot'
+						)}
 					</Button>
 				</div>
-			</motion.form>
+			</form>
 		</Form>
 	);
 }
