@@ -109,7 +109,7 @@ export default function HeroForm({
 						control={form.control}
 						name="email"
 						render={({ field }) => (
-							<FormItem className="relative">
+							<FormItem className="relative flex-1">
 								<FormControl>
 									<Input
 										placeholder="Enter Email Address"

@@ -38,7 +38,7 @@ export function FinalCTA() {
 				</p>
 
 				<motion.div
-					className="mx-auto mb-8 max-w-md rounded-2xl border border-white/5 bg-gradient-to-br from-black/40 to-black/20 p-6 shadow-2xl backdrop-blur-xl"
+					className="mx-auto mb-8 max-w-md rounded-2xl border border-white/5 bg-gradient-to-br from-black/40 to-black/20 px-2 py-6 shadow-2xl backdrop-blur-xl lg:p-6"
 					whileHover={{ scale: 1.02 }}
 				>
 					<HeroForm />
