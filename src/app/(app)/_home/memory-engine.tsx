@@ -57,6 +57,7 @@ export const NeuralMemoryEngine = () => {
 	const [activeNode, setActiveNode] = useState<string | null>(null);
 	const [dots, setDots] = useState<any[]>([]);
 	const [lines, setLines] = useState<any[]>([]);
+	const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
 	useEffect(() => {
 		// move this to a util if needed
@@ -95,36 +96,38 @@ export const NeuralMemoryEngine = () => {
 						Every mail, meeting, and voice note connects in
 						real-time
 					</p>
+					<div className="flex justify-center">
+						<div className="relative mx-auto h-80 w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-white/[0.01] backdrop-blur-xl md:h-96">
+							<NeuralVisualization dots={dots} lines={lines} />
 
-					<div className="relative mx-auto h-80 max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-white/[0.01] backdrop-blur-xl md:h-96">
-						<NeuralVisualization dots={dots} lines={lines} />
-
-						{memoryNodes.map((node, index) => {
-							const position = node.position;
-							return (
-								<MemoryNode
-									key={node.id}
-									node={node}
-									position={position}
-									isActive={activeNode === node.id}
-									index={index}
-									onToggle={(id: string) =>
-										setActiveNode(
-											activeNode === id ? null : id
-										)
-									}
-								>
-									{activeNode === node.id && (
-										<MemoryPopup
-											node={node}
-											position={position}
-										/>
-									)}
-								</MemoryNode>
-							);
-						})}
+							{memoryNodes.map((node, index) => {
+								const position = isMobile
+									? node.mobilePosition
+									: node.position;
+								return (
+									<MemoryNode
+										key={node.id}
+										node={node}
+										position={position}
+										isActive={activeNode === node.id}
+										index={index}
+										onToggle={(id: string) =>
+											setActiveNode(
+												activeNode === id ? null : id
+											)
+										}
+									>
+										{activeNode === node.id && (
+											<MemoryPopup
+												node={node}
+												position={position}
+											/>
+										)}
+									</MemoryNode>
+								);
+							})}
+						</div>
 					</div>
-
 					<p className="mt-4 text-sm text-gray-400">
 						Tap nodes to see what Asmi learns
 					</p>
@@ -155,7 +158,7 @@ export const NeuralVisualization = ({ dots, lines }: any) => (
 		))}
 
 		<motion.div
-			className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2"
+			className="absolute z-10 flex size-full items-center justify-center"
 			animate={{
 				scale: [1, 1.1, 1],
 				boxShadow: [
@@ -194,13 +197,18 @@ export const NeuralVisualization = ({ dots, lines }: any) => (
 
 export const MemoryPopup = ({ node, position }: any) => {
 	const alignRight = position.x > 75;
+	const alignBottom = position.y > 60;
 
 	return (
 		<motion.div
 			initial={{ opacity: 0, scale: 0.8, y: 10 }}
 			animate={{ opacity: 1, scale: 1, y: 0 }}
-			className="absolute top-full z-30 mt-2"
+			className="absolute z-30"
 			style={{
+				top: alignBottom ? 'auto' : '100%',
+				bottom: alignBottom ? '100%' : 'auto',
+				marginTop: alignBottom ? undefined : '0.5rem', // mt-2
+				marginBottom: alignBottom ? '0.5rem' : undefined, // mb-2
 				left: alignRight ? 'auto' : '50%',
 				right: alignRight ? '0' : 'auto',
 				transform: alignRight ? 'translateX(0)' : 'translateX(-50%)',

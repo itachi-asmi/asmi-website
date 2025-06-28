@@ -1,14 +1,17 @@
 import Link from 'next/link';
 
+import Logo from './logo';
+
 export default function Footer() {
 	return (
-		<footer className="border-t border-[#5DFF9F]/10 bg-[#0D0D0D] px-6 py-16">
+		<footer className="border-t border-[#5DFF9F]/10 bg-[#0D0D0D] px-6 py-8">
 			<div className="mx-auto max-w-7xl">
 				<div className="flex flex-col items-center justify-between gap-8 md:flex-row">
 					<div className="flex items-center gap-4">
-						<span className="text-xl font-medium text-white">
+						{/* <span className="text-xl font-medium text-white">
 							Built for operators who move fast.
-						</span>
+						</span> */}
+						<Logo />
 					</div>
 					<div
 						className="grid grid-cols-2 gap-8 md:ml-auto lg:place-items-end

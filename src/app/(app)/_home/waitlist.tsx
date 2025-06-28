@@ -23,7 +23,7 @@ export function WaitlistCTA() {
 					className="mx-auto mb-8 max-w-md rounded-2xl border border-white/5 bg-gradient-to-br from-black/40 to-black/20 px-2 py-6 shadow-2xl backdrop-blur-xl lg:p-6"
 					whileHover={{ scale: 1.02 }}
 				>
-					<HeroForm btnChange />
+					<HeroForm />
 					<p className="mt-3 text-center text-xs text-gray-400">
 						Join the tribe of top 1% operators in the world
 					</p>

@@ -25,11 +25,7 @@ const schema = z.object({
 	email: z.string().email({ message: 'Invalid email address' }),
 });
 
-export default function HeroForm({
-	btnChange = false,
-}: {
-	btnChange?: boolean;
-}) {
+export default function HeroForm() {
 	const form = useForm({
 		resolver: zodResolver(schema),
 		defaultValues: {
@@ -134,11 +130,7 @@ export default function HeroForm({
 						)}
 						aria-label="join beta"
 					>
-						{btnChange ? (
-							<Send className="size-4" />
-						) : (
-							'Secure my spot'
-						)}
+						<Send className="size-4" />
 					</Button>
 				</div>
 			</form>
