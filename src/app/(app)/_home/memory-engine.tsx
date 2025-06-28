@@ -11,8 +11,8 @@ const memoryNodes = [
 		id: 'calendar',
 		icon: Calendar,
 		label: 'Calendar',
-		position: { x: 50, y: 20 },
-		mobilePosition: { x: 50, y: 25 },
+		position: { x: 47, y: 10 },
+		mobilePosition: { x: 42, y: 5 },
 		data: [
 			'Meeting with Sarah @ 3pm',
 			'Investor call @ 5pm',
@@ -23,16 +23,16 @@ const memoryNodes = [
 		id: 'mail',
 		icon: Mail,
 		label: 'Mails',
-		position: { x: 80, y: 50 },
-		mobilePosition: { x: 75, y: 50 },
+		position: { x: 80, y: 44 },
+		mobilePosition: { x: 85, y: 45 },
 		data: ['Follow-up from John', 'Q4 report due', 'Partnership proposal'],
 	},
 	{
 		id: 'voice',
 		icon: Mic,
 		label: 'Voice Notes',
-		position: { x: 50, y: 80 },
-		mobilePosition: { x: 50, y: 75 },
+		position: { x: 47, y: 80 },
+		mobilePosition: { x: 40, y: 80 },
 		data: [
 			'Remember to call mom',
 			'Book flight to NYC',
@@ -43,8 +43,8 @@ const memoryNodes = [
 		id: 'internet',
 		icon: Globe,
 		label: 'Internet',
-		position: { x: 20, y: 50 },
-		mobilePosition: { x: 25, y: 50 },
+		position: { x: 15, y: 44 },
+		mobilePosition: { x: 5, y: 44 },
 		data: [
 			"Sarah's LinkedIn updated",
 			'Company news alert',
@@ -99,33 +99,36 @@ export const NeuralMemoryEngine = () => {
 					<div className="flex justify-center">
 						<div className="relative mx-auto h-80 w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-white/[0.01] backdrop-blur-xl md:h-96">
 							<NeuralVisualization dots={dots} lines={lines} />
+							{typeof window !== 'undefined' &&
+								memoryNodes.map((node, index) => {
+									const position = isMobile
+										? node.mobilePosition
+										: node.position;
 
-							{memoryNodes.map((node, index) => {
-								const position = isMobile
-									? node.mobilePosition
-									: node.position;
-								return (
-									<MemoryNode
-										key={node.id}
-										node={node}
-										position={position}
-										isActive={activeNode === node.id}
-										index={index}
-										onToggle={(id: string) =>
-											setActiveNode(
-												activeNode === id ? null : id
-											)
-										}
-									>
-										{activeNode === node.id && (
-											<MemoryPopup
-												node={node}
-												position={position}
-											/>
-										)}
-									</MemoryNode>
-								);
-							})}
+									return (
+										<MemoryNode
+											key={node.id}
+											node={node}
+											position={position}
+											isActive={activeNode === node.id}
+											index={index}
+											onToggle={(id: string) =>
+												setActiveNode(
+													activeNode === id
+														? null
+														: id
+												)
+											}
+										>
+											{activeNode === node.id && (
+												<MemoryPopup
+													node={node}
+													position={position}
+												/>
+											)}
+										</MemoryNode>
+									);
+								})}
 						</div>
 					</div>
 					<p className="mt-4 text-sm text-gray-400">
@@ -158,7 +161,7 @@ export const NeuralVisualization = ({ dots, lines }: any) => (
 		))}
 
 		<motion.div
-			className="absolute z-10 flex size-full items-center justify-center"
+			className="absolute flex size-full items-center justify-center"
 			animate={{
 				scale: [1, 1.1, 1],
 				boxShadow: [
@@ -207,8 +210,8 @@ export const MemoryPopup = ({ node, position }: any) => {
 			style={{
 				top: alignBottom ? 'auto' : '100%',
 				bottom: alignBottom ? '100%' : 'auto',
-				marginTop: alignBottom ? undefined : '0.5rem', // mt-2
-				marginBottom: alignBottom ? '0.5rem' : undefined, // mb-2
+				marginTop: alignBottom ? undefined : '0.5rem',
+				marginBottom: alignBottom ? '0.5rem' : undefined,
 				left: alignRight ? 'auto' : '50%',
 				right: alignRight ? '0' : 'auto',
 				transform: alignRight ? 'translateX(0)' : 'translateX(-50%)',
@@ -242,7 +245,7 @@ export const MemoryNode = ({
 	children,
 }: any) => (
 	<motion.div
-		className="absolute z-20 cursor-pointer"
+		className="absolute cursor-pointer"
 		style={{
 			left: `${position.x}%`,
 			top: `${position.y}%`,
